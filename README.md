@@ -1,6 +1,6 @@
-# SLLM Service Prototype
+# sLLM Service Prototype
 
-This repository contains a prototype SLLM service for generating Korean
+This repository contains a prototype sLLM service for generating Korean
 attention-assessment reports from PDSS task data.
 
 The top-level runtime is `sllm_service_ui/`. It serves the web UI, retrieves
@@ -21,7 +21,7 @@ prepared and converted into summary files by the preprocessing pipeline.
      -> data_preprocessing/task_results/
      -> data_preprocessing/summary/
 
-3. Run the SLLM service UI
+3. Run the sLLM service UI
    data_preprocessing/summary/
    model/adapter/
    sllm_service_ui/kg/
@@ -429,7 +429,7 @@ For PI features, larger values produce higher percentile ranks. For task result
 metrics, smaller values are treated as better performance. Ties receive the most
 favorable rank within the tied group.
 
-## 7. Run The SLLM Service UI
+## 7. Run The sLLM Service UI
 
 From the UI directory:
 
