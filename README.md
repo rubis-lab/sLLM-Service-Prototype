@@ -565,3 +565,4 @@ If the UI cannot load participant data, check:
 3. The entered participant ID matches `user_name`, `Initial`, or `client_id`
    depending on the current UI lookup logic.
 4. `HF_FT3_ADAPTER_DIR` points to a valid adapter directory.
+
