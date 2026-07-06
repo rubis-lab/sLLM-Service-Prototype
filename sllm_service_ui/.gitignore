@@ -1,0 +1,7 @@
+.env
+*.log
+*.pid
+*.port
+node_modules/
+.pdf_venv/
+.local/

@@ -1,0 +1,941 @@
+{
+  "version": "kg_architecture_edits_v1",
+  "updatedAt": "2026-05-06T12:40:41.371Z",
+  "nodeOverrides": {
+    "adhd": {
+      "x": 55,
+      "y": 780,
+      "w": 330,
+      "h": 82,
+      "label": "ADHD",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "layer": "Clinical",
+        "role": "ADHD clinical construct"
+      },
+      "id": "adhd"
+    },
+    "criterion_a": {
+      "x": 455,
+      "y": 410,
+      "w": 520,
+      "h": 105,
+      "label": "Criterion A",
+      "sublabel": "증상 6개월 이상 지속\n17세 미만 6개↑, 17세 이상 5개↑",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "official": "A persistent pattern of inattention and/or hyperactivity-impulsivity that interferes with functioning or development."
+      },
+      "id": "criterion_a"
+    },
+    "criterion_b": {
+      "x": 455,
+      "y": 610,
+      "w": 520,
+      "h": 92,
+      "label": "Criterion B",
+      "sublabel": "증상 12세 이전 발현",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "official": "Several inattentive or hyperactive-impulsive symptoms were present prior to age 12 years."
+      },
+      "id": "criterion_b"
+    },
+    "criterion_c": {
+      "x": 455,
+      "y": 805,
+      "w": 520,
+      "h": 94,
+      "label": "Criterion C",
+      "sublabel": "2개 이상 환경에서\n증상 존재",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "official": "Several symptoms are present in two or more settings."
+      },
+      "id": "criterion_c"
+    },
+    "criterion_d": {
+      "x": 455,
+      "y": 1005,
+      "w": 520,
+      "h": 102,
+      "label": "Criterion D",
+      "sublabel": "사회적, 학업적, 직업적\n기능 저하",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "official": "Clear evidence that symptoms interfere with or reduce the quality of social, academic, or occupational functioning."
+      },
+      "id": "criterion_d"
+    },
+    "criterion_e": {
+      "x": 455,
+      "y": 1210,
+      "w": 520,
+      "h": 100,
+      "label": "Criterion E",
+      "sublabel": "다른 정신질환으로\n설명 불가",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "official": "Symptoms do not occur exclusively during another psychotic disorder and are not better explained by another mental disorder."
+      },
+      "id": "criterion_e"
+    },
+    "a1": {
+      "x": 1040,
+      "y": 72,
+      "w": 360,
+      "h": 84,
+      "label": "Criterion A1",
+      "sublabel": "(부주의 증상군)",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "count": "9 symptoms",
+        "threshold": "Under 17: 6 or more; age 17 and older: 5 or more"
+      },
+      "id": "a1"
+    },
+    "a2": {
+      "x": 1040,
+      "y": 820,
+      "w": 360,
+      "h": 84,
+      "label": "Criterion A2",
+      "sublabel": "(과잉행동-충동성 증상군)",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "count": "9 symptoms",
+        "threshold": "Under 17: 6 or more; age 17 and older: 5 or more"
+      },
+      "id": "a2"
+    },
+    "a1_1": {
+      "x": 1432,
+      "y": 78,
+      "w": 360,
+      "h": 64,
+      "label": "a  세부 사항에 부주의",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "criterion": "A1",
+        "item": "1",
+        "label": "a  세부 사항에 부주의"
+      },
+      "id": "a1_1"
+    },
+    "a1_2": {
+      "x": 1432,
+      "y": 150,
+      "w": 360,
+      "h": 64,
+      "label": "b  주의 지속 어려움",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "criterion": "A1",
+        "item": "2",
+        "label": "b  주의 지속 어려움"
+      },
+      "id": "a1_2"
+    },
+    "a1_3": {
+      "x": 1432,
+      "y": 222,
+      "w": 360,
+      "h": 64,
+      "label": "c  경청하지 않음",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "criterion": "A1",
+        "item": "3",
+        "label": "c  경청하지 않음"
+      },
+      "id": "a1_3"
+    },
+    "a1_4": {
+      "x": 1432,
+      "y": 294,
+      "w": 360,
+      "h": 64,
+      "label": "d  지시 따르기 및\n과제 완수 실패",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "criterion": "A1",
+        "item": "4",
+        "label": "d  지시 따르기 및\n과제 완수 실패"
+      },
+      "id": "a1_4"
+    },
+    "a1_5": {
+      "x": 1432,
+      "y": 366,
+      "w": 360,
+      "h": 64,
+      "label": "e  과제/활동 조직화 어려움",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "criterion": "A1",
+        "item": "5",
+        "label": "e  과제/활동 조직화 어려움"
+      },
+      "id": "a1_5"
+    },
+    "a1_6": {
+      "x": 1432,
+      "y": 438,
+      "w": 360,
+      "h": 64,
+      "label": "f  지속적 정신 노력\n요구 과제 회피",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "criterion": "A1",
+        "item": "6",
+        "label": "f  지속적 정신 노력\n요구 과제 회피"
+      },
+      "id": "a1_6"
+    },
+    "a1_7": {
+      "x": 1432,
+      "y": 510,
+      "w": 360,
+      "h": 64,
+      "label": "g  과제에 필요한 물건\n자주 잃어버림",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "criterion": "A1",
+        "item": "7",
+        "label": "g  과제에 필요한 물건\n자주 잃어버림"
+      },
+      "id": "a1_7"
+    },
+    "a1_8": {
+      "x": 1432,
+      "y": 582,
+      "w": 360,
+      "h": 64,
+      "label": "h  외부 자극에 산만",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "criterion": "A1",
+        "item": "8",
+        "label": "h  외부 자극에 산만"
+      },
+      "id": "a1_8"
+    },
+    "a1_9": {
+      "x": 1432,
+      "y": 654,
+      "w": 360,
+      "h": 64,
+      "label": "i  일상 활동 잊어버림",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "criterion": "A1",
+        "item": "9",
+        "label": "i  일상 활동 잊어버림"
+      },
+      "id": "a1_9"
+    },
+    "a2_1": {
+      "x": 1432,
+      "y": 820,
+      "w": 360,
+      "h": 64,
+      "label": "a  손발 꼼지락,\n몸 가만두지 못함",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "criterion": "A2",
+        "item": "1",
+        "label": "a  손발 꼼지락,\n몸 가만두지 못함"
+      },
+      "id": "a2_1"
+    },
+    "a2_2": {
+      "x": 1432,
+      "y": 892,
+      "w": 360,
+      "h": 64,
+      "label": "b  앉아 있어야 할 때\n자리 이탈",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "criterion": "A2",
+        "item": "2",
+        "label": "b  앉아 있어야 할 때\n자리 이탈"
+      },
+      "id": "a2_2"
+    },
+    "a2_3": {
+      "x": 1432,
+      "y": 964,
+      "w": 360,
+      "h": 64,
+      "label": "c  부적절한 상황에서\n뛰거나 기어오름",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "criterion": "A2",
+        "item": "3",
+        "label": "c  부적절한 상황에서\n뛰거나 기어오름"
+      },
+      "id": "a2_3"
+    },
+    "a2_4": {
+      "x": 1432,
+      "y": 1036,
+      "w": 360,
+      "h": 64,
+      "label": "d  조용히 여가 활동하기\n어려움",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "criterion": "A2",
+        "item": "4",
+        "label": "d  조용히 여가 활동하기\n어려움"
+      },
+      "id": "a2_4"
+    },
+    "a2_5": {
+      "x": 1432,
+      "y": 1108,
+      "w": 360,
+      "h": 64,
+      "label": "e  끊임없이 움직임",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "criterion": "A2",
+        "item": "5",
+        "label": "e  끊임없이 움직임"
+      },
+      "id": "a2_5"
+    },
+    "a2_6": {
+      "x": 1432,
+      "y": 1180,
+      "w": 360,
+      "h": 64,
+      "label": "f  지나치게 말을 많이 함",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "criterion": "A2",
+        "item": "6",
+        "label": "f  지나치게 말을 많이 함"
+      },
+      "id": "a2_6"
+    },
+    "a2_7": {
+      "x": 1432,
+      "y": 1252,
+      "w": 360,
+      "h": 64,
+      "label": "g  질문이 끝나기 전에 대답",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "criterion": "A2",
+        "item": "7",
+        "label": "g  질문이 끝나기 전에 대답"
+      },
+      "id": "a2_7"
+    },
+    "a2_8": {
+      "x": 1432,
+      "y": 1324,
+      "w": 360,
+      "h": 64,
+      "label": "h  차례 기다리기 어려움",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "criterion": "A2",
+        "item": "8",
+        "label": "h  차례 기다리기 어려움"
+      },
+      "id": "a2_8"
+    },
+    "a2_9": {
+      "x": 1432,
+      "y": 1396,
+      "w": 360,
+      "h": 64,
+      "label": "i  타인 방해/끼어들기",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "criterion": "A2",
+        "item": "9",
+        "label": "i  타인 방해/끼어들기"
+      },
+      "id": "a2_9"
+    },
+    "selective_attention": {
+      "x": 1875,
+      "y": 130,
+      "w": 280,
+      "h": 76,
+      "label": "선택주의력",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": true,
+      "details": {
+        "layer": "Behavior Proxy"
+      },
+      "id": "selective_attention"
+    },
+    "sustained_attention": {
+      "x": 1875,
+      "y": 330,
+      "w": 280,
+      "h": 76,
+      "label": "지속적 주의력",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "layer": "Behavior Proxy"
+      },
+      "id": "sustained_attention"
+    },
+    "planning": {
+      "x": 1875,
+      "y": 515,
+      "w": 280,
+      "h": 76,
+      "label": "계획 및 조직화",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "layer": "Behavior Proxy"
+      },
+      "id": "planning"
+    },
+    "working_memory": {
+      "x": 1875,
+      "y": 700,
+      "w": 280,
+      "h": 76,
+      "label": "작업기억",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "layer": "Behavior Proxy"
+      },
+      "id": "working_memory"
+    },
+    "motor_activity": {
+      "x": 1875,
+      "y": 990,
+      "w": 280,
+      "h": 76,
+      "label": "운동적 활동 수준",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "layer": "Behavior Proxy"
+      },
+      "id": "motor_activity"
+    },
+    "verbal_activity": {
+      "x": 1875,
+      "y": 1210,
+      "w": 280,
+      "h": 76,
+      "label": "언어적 활동 수준",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "layer": "Behavior Proxy"
+      },
+      "id": "verbal_activity"
+    },
+    "inhibition": {
+      "x": 1875,
+      "y": 1410,
+      "w": 280,
+      "h": 76,
+      "label": "행동 억제",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "layer": "Behavior Proxy"
+      },
+      "id": "inhibition"
+    },
+    "first_fixation_duration": {
+      "x": 2180,
+      "y": 110,
+      "w": 365,
+      "h": 74,
+      "label": "et_first_fixation_duration_mean",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": true,
+      "details": {
+        "node": {
+          "name": "et_first_fixation_duration_mean",
+          "layer": "Primitive Indicator Layer",
+          "definition": "자극 제시 이후 첫 fixation의 지속시간 평균",
+          "unit": "ms",
+          "measurement": {
+            "modality": "eye_tracking"
+          }
+        },
+        "edge_bundles": {
+          "selective_attention_to_et_first_fixation_duration_mean": {
+            "from": {
+              "layer": "Behavior Proxy Layer",
+              "name": "선택주의력"
+            },
+            "to": {
+              "layer": "Primitive Indicator Layer",
+              "name": "et_first_fixation_duration_mean"
+            },
+            "task_variant_assignments": {
+              "VST": {
+                "cognitive_mapping": {
+                  "name": "automatic processing",
+                  "definition": "자극이 처음 시야에 들어왔을 때 빠르고 비교적 자동적으로 일어나는 초기 처리 및 주의 끌림 과정",
+                  "literature_insight": "et_first_fixation_duration_mean ↑ → automatic processing 부담 ↑ → 선택주의력 ↓"
+                },
+                "interpretation": {
+                  "higher_value": {
+                    "summary": "첫 fixation 지속시간 증가",
+                    "cognitive_meaning": "automatic processing 단계에서 초기 처리 또는 주의 끌림 부담 증가 가능성",
+                    "behavior_proxy_meaning": "선택주의력 저하와 관련된 보조 소견으로 해석 가능"
+                  },
+                  "lower_value": {
+                    "summary": "첫 fixation 지속시간 감소 또는 지연 근거 약함",
+                    "cognitive_meaning": "automatic processing 지연의 근거는 상대적으로 약함",
+                    "behavior_proxy_meaning": "낮은 값만으로 선택주의력이 우수하다고 단정하지 않음"
+                  }
+                },
+                "evidence": {
+                  "reference_ids": [
+                    "Cui_2020"
+                  ]
+                },
+                "report_template": {
+                  "high_value_phrase": "VST에서 et_first_fixation_duration_mean이 높게 나타난 경우, 자극 제시 직후 첫 fixation의 지속시간이 길어진 소견으로 볼 수 있습니다. 이는 automatic processing 단계에서 초기 처리 또는 주의 끌림 부담이 증가했을 가능성을 시사하며, 선택주의력 관련 보조 소견으로 해석할 수 있습니다.",
+                  "low_value_phrase": "VST에서 et_first_fixation_duration_mean이 낮게 나타난 경우, automatic processing 지연을 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 선택주의력이 우수하다고 단정하지 않습니다."
+                }
+              }
+            }
+          }
+        },
+        "references": {
+          "Cui_2020": {
+            "authors": [
+              "Cui",
+              "X.",
+              "Wang",
+              "J.",
+              "Chang",
+              "Y.",
+              "Su",
+              "M.",
+              "Sherman",
+              "H. T.",
+              "Wu",
+              "Z.",
+              "Wang",
+              "Y.",
+              "Zhou",
+              "W."
+            ],
+            "year": 2020,
+            "title": "Visual Search in Chinese Children With Attention Deficit/Hyperactivity Disorder and Comorbid Developmental Dyslexia: Evidence for Pathogenesis From Eye Movements",
+            "journal": "Frontiers in Psychology",
+            "volume": "11",
+            "article": "880",
+            "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.00880/full"
+          }
+        }
+      },
+      "id": "first_fixation_duration"
+    },
+    "fixation_duration_mean": {
+      "x": 2180,
+      "y": 230,
+      "w": 365,
+      "h": 74,
+      "label": "et_fixation_duration_mean",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": true,
+      "details": {
+        "node": {
+          "name": "et_fixation_duration_mean",
+          "layer": "Primitive Indicator Layer",
+          "definition": "한 번의 fixation 지속시간의 평균",
+          "unit": "ms",
+          "measurement": {
+            "modality": "eye_tracking"
+          }
+        },
+        "edge_bundles": {
+          "selective_attention_to_et_fixation_duration_mean": {
+            "from": {
+              "layer": "Behavior Proxy Layer",
+              "name": "선택주의력"
+            },
+            "to": {
+              "layer": "Primitive Indicator Layer",
+              "name": "et_fixation_duration_mean"
+            },
+            "task_variant_assignments": {
+              "VST": {
+                "cognitive_mapping": {
+                  "name": "central discrimination",
+                  "definition": "현재 주시 중인 item을 중심시야/foveal 정보로 target인지 distractor인지 판별하는 과정",
+                  "literature_insight": "et_fixation_duration_mean ↑ → central discrimination 부담 ↑ → 선택주의력 ↓"
+                },
+                "interpretation": {
+                  "higher_value": {
+                    "summary": "fixation 지속시간 증가",
+                    "cognitive_meaning": "central discrimination 과정에서 target/distractor 판별 부담 증가 가능성",
+                    "behavior_proxy_meaning": "선택주의력 저하와 관련된 보조 소견으로 해석 가능"
+                  },
+                  "lower_value": {
+                    "summary": "fixation 지속시간 감소 또는 지연 근거 약함",
+                    "cognitive_meaning": "central discrimination 지연의 근거는 상대적으로 약함",
+                    "behavior_proxy_meaning": "낮은 값만으로 선택주의력이 우수하다고 단정하지 않음"
+                  }
+                },
+                "evidence": {
+                  "reference_ids": [
+                    "Canu_2022"
+                  ]
+                },
+                "report_template": {
+                  "high_value_phrase": "VST에서 et_fixation_duration_mean이 높게 나타난 경우, 한 번의 fixation 동안 현재 주시 중인 item을 중심시야/foveal 정보로 target인지 distractor인지 판별하는 central discrimination 과정이 상대적으로 길어졌을 가능성을 시사합니다. 이는 선택주의력 관련 보조 소견으로 해석할 수 있습니다.",
+                  "low_value_phrase": "VST에서 et_fixation_duration_mean이 낮게 나타난 경우, central discrimination 지연을 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 선택주의력이 우수하다고 단정하지 않고, 정확도, 반응시간, target miss와 함께 해석해야 합니다."
+                }
+              }
+            }
+          }
+        },
+        "references": {
+          "Canu_2022": {
+            "authors": [
+              "Canu",
+              "D.",
+              "Ioannou",
+              "C.",
+              "Müller",
+              "K.",
+              "Martin",
+              "B.",
+              "Fleischhaker",
+              "C.",
+              "Biscaldi",
+              "M.",
+              "Beauducel",
+              "A.",
+              "Smyrnis",
+              "N.",
+              "Tebartz van Elst",
+              "L.",
+              "Klein",
+              "C."
+            ],
+            "year": 2022,
+            "title": "Visual search in neurodevelopmental disorders: evidence towards a continuum of impairment",
+            "journal": "European Child & Adolescent Psychiatry",
+            "volume": "31",
+            "pages": "1-18",
+            "url": "https://link.springer.com/article/10.1007/s00787-021-01756-z"
+          }
+        }
+      },
+      "id": "fixation_duration_mean"
+    },
+    "fixation_duration_std": {
+      "x": 2180,
+      "y": 350,
+      "w": 365,
+      "h": 74,
+      "label": "et_fixation_duration_std",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": true,
+      "details": {
+        "node": {
+          "name": "et_fixation_duration_std",
+          "layer": "Primitive Indicator Layer",
+          "definition": "한 번의 fixation 지속시간의 표준편차",
+          "unit": "ms",
+          "measurement": {
+            "modality": "eye_tracking"
+          }
+        },
+        "edge_bundles": {
+          "selective_attention_to_et_fixation_duration_std": {
+            "from": {
+              "layer": "Behavior Proxy Layer",
+              "name": "선택주의력"
+            },
+            "to": {
+              "layer": "Primitive Indicator Layer",
+              "name": "et_fixation_duration_std"
+            },
+            "task_variant_assignments": {
+              "VST": {
+                "cognitive_mapping": {
+                  "name": "intra-subject variability",
+                  "definition": "한 사람 안에서 trial 또는 fixation마다 수행 시간이 얼마나 들쭉날쭉한지",
+                  "literature_insight": "et_fixation_duration_std ↑ → intra-subject variability ↑ → 선택주의력 ↓"
+                },
+                "interpretation": {
+                  "higher_value": {
+                    "summary": "fixation 지속시간 변동성 증가",
+                    "cognitive_meaning": "trial 또는 fixation마다 처리 시간이 들쭉날쭉해지는 intra-subject variability 증가 가능성",
+                    "behavior_proxy_meaning": "선택주의력 저하와 관련된 보조 소견으로 해석 가능"
+                  },
+                  "lower_value": {
+                    "summary": "fixation 지속시간 변동성 감소 또는 변동성 증가 근거 약함",
+                    "cognitive_meaning": "intra-subject variability 증가의 근거는 상대적으로 약함",
+                    "behavior_proxy_meaning": "낮은 값만으로 선택주의력이 우수하다고 단정하지 않음"
+                  }
+                },
+                "evidence": {
+                  "reference_ids": [
+                    "Canu_2022"
+                  ]
+                },
+                "report_template": {
+                  "high_value_phrase": "VST에서 et_fixation_duration_std가 높게 나타난 경우, 한 사람 안에서 trial 또는 fixation마다 수행 시간이 들쭉날쭉해진 소견으로 볼 수 있습니다. 이는 intra-subject variability 증가 가능성을 시사하며, 선택주의력 관련 보조 소견으로 해석할 수 있습니다.",
+                  "low_value_phrase": "VST에서 et_fixation_duration_std가 낮게 나타난 경우, intra-subject variability 증가를 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 선택주의력이나 수행 안정성이 우수하다고 단정하지 않습니다."
+                }
+              }
+            }
+          }
+        },
+        "references": {
+          "Canu_2022": {
+            "authors": [
+              "Canu",
+              "D.",
+              "Ioannou",
+              "C.",
+              "Müller",
+              "K.",
+              "Martin",
+              "B.",
+              "Fleischhaker",
+              "C.",
+              "Biscaldi",
+              "M.",
+              "Beauducel",
+              "A.",
+              "Smyrnis",
+              "N.",
+              "Tebartz van Elst",
+              "L.",
+              "Klein",
+              "C."
+            ],
+            "year": 2022,
+            "title": "Visual search in neurodevelopmental disorders: evidence towards a continuum of impairment",
+            "journal": "European Child & Adolescent Psychiatry",
+            "volume": "31",
+            "pages": "1-18",
+            "url": "https://link.springer.com/article/10.1007/s00787-021-01756-z"
+          }
+        }
+      },
+      "id": "fixation_duration_std"
+    },
+    "total_nonspeech": {
+      "x": 2180,
+      "y": 980,
+      "w": 365,
+      "h": 68,
+      "label": "total nonspeech time",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "node": {
+          "name": "total nonspeech time",
+          "layer": "Primitive Indicator Layer",
+          "definition": "",
+          "unit": "",
+          "measurement": {
+            "modality": ""
+          }
+        },
+        "edge_bundles": {},
+        "references": {}
+      },
+      "id": "total_nonspeech"
+    },
+    "utterance_duration": {
+      "x": 2180,
+      "y": 1170,
+      "w": 365,
+      "h": 68,
+      "label": "utterance duration",
+      "sublabel": "",
+      "footnote": "",
+      "highlight": false,
+      "details": {
+        "node": {
+          "name": "utterance duration",
+          "layer": "Primitive Indicator Layer",
+          "definition": "",
+          "unit": "",
+          "measurement": {
+            "modality": ""
+          }
+        },
+        "edge_bundles": {},
+        "references": {}
+      },
+      "id": "utterance_duration"
+    }
+  },
+  "edgeOverrides": {},
+  "customNodes": [
+    {
+      "id": "custom_pi_1777876932871",
+      "label": "et_fixation_dispersion_mean",
+      "sublabel": "",
+      "x": 2180,
+      "y": 470,
+      "w": 365,
+      "h": 74,
+      "highlight": true,
+      "footnote": "",
+      "details": {
+        "node": {
+          "name": "et_fixation_dispersion_mean",
+          "layer": "Primitive Indicator Layer",
+          "definition": "하나의 fixation 내에서 시선 좌표가 평균 위치를 중심으로 얼마나 변동하는지를 계산한 지표의 평균",
+          "unit": "pixel",
+          "measurement": {
+            "modality": "eye_tracking"
+          }
+        },
+        "edge_bundles": {
+          "selective_attention_to_et_fixation_dispersion_mean": {
+            "from": {
+              "layer": "Behavior Proxy Layer",
+              "name": "선택주의력"
+            },
+            "to": {
+              "layer": "Primitive Indicator Layer",
+              "name": "et_fixation_dispersion_mean"
+            },
+            "task_variant_assignments": {
+              "VST": {
+                "cognitive_mapping": {
+                  "name": "search coverage",
+                  "definition": "화면의 여러 위치를 얼마나 넓고 전략적으로 탐색했는지",
+                  "literature_insight": "et_fixation_dispersion_mean ↓ → search coverage ↓ → 선택주의력 ↓"
+                },
+                "interpretation": {
+                  "higher_value": {
+                    "summary": "fixation dispersion 증가",
+                    "cognitive_meaning": "현재 KG의 difficulty_when_low edge와는 직접 정렬되지 않음. fixation 내 미세 흔들림 증가 또는 더 넓은 분산 가능성으로 중립적으로 해석",
+                    "behavior_proxy_meaning": "높은 값만으로 선택주의력 저하 또는 우수성을 단정하지 않음"
+                  },
+                  "lower_value": {
+                    "summary": "fixation dispersion 감소",
+                    "cognitive_meaning": "search coverage가 제한되었거나 시선 탐색이 좁은 범위에 머물렀을 가능성",
+                    "behavior_proxy_meaning": "선택주의력 저하와 관련된 보조 소견으로 해석 가능"
+                  }
+                },
+                "evidence": {
+                  "reference_ids": [
+                    "Yuval_Greenberg_2019"
+                  ]
+                },
+                "report_template": {
+                  "high_value_phrase": "VST에서 et_fixation_dispersion_mean이 높게 나타난 경우, 현재 KG의 difficulty_when_low edge와는 직접 정렬되지 않습니다. 따라서 search coverage 제한의 근거로 사용하지 않고, fixation 내 시선 좌표 변동이 상대적으로 크거나 분산이 넓게 나타난 상태로 중립적으로 기술합니다.",
+                  "low_value_phrase": "VST에서 et_fixation_dispersion_mean이 낮게 나타난 경우, 화면의 여러 위치를 넓고 전략적으로 탐색하는 search coverage가 제한되었을 가능성을 시사합니다. 이는 선택주의력 관련 보조 소견으로 해석할 수 있으나, 정확도, 반응시간, target miss와 함께 검토해야 합니다."
+                }
+              }
+            }
+          }
+        },
+        "references": {
+          "Yuval_Greenberg_2019": {
+            "authors": [
+              "Yuval-Greenberg",
+              "S.",
+              "Keren",
+              "A.",
+              "Hilo",
+              "R.",
+              "Paz",
+              "A.",
+              "Ratzon",
+              "N."
+            ],
+            "year": 2019,
+            "title": "Gaze control during simulator driving in adolescents with and without attention deficit hyperactivity disorder",
+            "journal": "The American Journal of Occupational Therapy",
+            "volume": "73(3)",
+            "pages": "7303345030p1-7303345030p8",
+            "url": "https://doi.org/10.5014/ajot.2019.031500"
+          }
+        }
+      }
+    }
+  ],
+  "customEdges": [
+    {
+      "id": "custom_edge_1777876932871",
+      "source": "selective_attention",
+      "target": "custom_pi_1777876932871",
+      "className": "edge highlight",
+      "label": "",
+      "details": {
+        "relation": "custom edge",
+        "note": "근거와 해석 방향을 입력하세요."
+      }
+    }
+  ]
+}

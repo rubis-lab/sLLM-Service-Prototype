@@ -1,0 +1,82 @@
+{
+  "id": "dsm5_adhd_criteria_v1",
+  "version": "2026-05-04",
+  "scope": "DSM-5 ADHD diagnostic criteria guardrail for clinical-assistant report generation",
+  "clinical_boundary": [
+    "ADHD diagnosis cannot be made from one sensor task, CPT/CAT, eye-tracking result, or LLM response alone.",
+    "DSM-5 ADHD diagnosis requires clinical interview, developmental history, multi-informant reports, impairment assessment, cross-setting evidence, and differential diagnosis.",
+    "Sensor/task indicators may be described only as auxiliary observations related to attention or behavior proxies."
+  ],
+  "criteria": {
+    "A": {
+      "summary": "Persistent pattern of inattention and/or hyperactivity-impulsivity that interferes with functioning or development.",
+      "duration": "At least 6 months",
+      "developmental_inconsistency": "Symptoms are inconsistent with developmental level and negatively affect social, academic, or occupational activities.",
+      "A1_inattention": {
+        "count": 9,
+        "threshold_under_17": 6,
+        "threshold_17_or_older": 5,
+        "items_ko": [
+          "세부 사항에 주의를 기울이지 못하거나 부주의한 실수를 자주 함",
+          "과제나 놀이 활동에서 주의 지속이 어려움",
+          "직접 말할 때 듣지 않는 것처럼 보임",
+          "지시를 끝까지 따르지 못하고 과제나 의무를 완료하지 못함",
+          "과제와 활동을 체계화하는 데 어려움",
+          "지속적인 정신적 노력이 필요한 과제를 피하거나 싫어하거나 꺼림",
+          "과제나 활동에 필요한 물건을 자주 잃어버림",
+          "외부 자극에 쉽게 산만해짐",
+          "일상 활동을 자주 잊어버림"
+        ]
+      },
+      "A2_hyperactivity_impulsivity": {
+        "count": 9,
+        "threshold_under_17": 6,
+        "threshold_17_or_older": 5,
+        "items_ko": [
+          "손발을 가만히 두지 못하거나 자리에서 몸을 꿈틀거림",
+          "앉아 있어야 하는 상황에서 자리를 이탈함",
+          "부적절한 상황에서 뛰어다니거나 기어오름",
+          "조용히 놀거나 여가 활동을 하기 어려움",
+          "끊임없이 움직이는 것처럼 행동함",
+          "지나치게 말을 많이 함",
+          "질문이 끝나기 전에 성급하게 대답함",
+          "차례를 기다리기 어려움",
+          "다른 사람을 방해하거나 끼어듦"
+        ]
+      }
+    },
+    "B": "Several inattentive or hyperactive-impulsive symptoms were present before age 12 years.",
+    "C": "Several inattentive or hyperactive-impulsive symptoms are present in two or more settings.",
+    "D": "There is clear evidence that symptoms interfere with or reduce the quality of social, academic, or occupational functioning.",
+    "E": "Symptoms do not occur exclusively during schizophrenia or another psychotic disorder and are not better explained by another mental disorder."
+  },
+  "presentations": {
+    "predominantly_inattentive": "Criterion A1 is met but Criterion A2 is not met for the past 6 months.",
+    "predominantly_hyperactive_impulsive": "Criterion A2 is met but Criterion A1 is not met for the past 6 months.",
+    "combined": "Both Criterion A1 and Criterion A2 are met for the past 6 months."
+  },
+  "forbidden_or_risky_phrasing": [
+    "Sensor data proves ADHD.",
+    "VST/Flanker/CPT alone satisfies DSM-5 ADHD criteria.",
+    "A1 or A2 criteria are met without symptom count, duration, cross-setting, impairment, and differential information.",
+    "DSM-IV before-age-7 rule should be used as DSM-5 criterion B."
+  ],
+  "report_generation": {
+    "clinical_bridge_section_title": "DSM-5 진단 기준 확인 사항",
+    "behavior_proxy_clinical_bridge": {
+      "target_criterion": "DSM-5 Criterion A1(부주의 증상군)",
+      "bridge_sentences": [
+        "임상적으로는 이러한 {behavior_proxy} 관련 양상이 DSM-5 Criterion A1(부주의 증상군)과 일부 관련되어 있을 가능성이 있다.",
+        "특히 A1의 여러 증상 중 다음과 관련하여 추가 확인이 필요한 보조 소견으로 해석될 수 있다."
+      ],
+      "non_diagnostic_disclaimer": "다만 이는 센서 기반 보조 관찰이며, 위 항목의 DSM-5 충족을 의미하지는 않는다. 실제 Criterion A1 판단을 위해서는 증상 개수, 6개월 이상 지속 여부, 발달 수준 대비 부적절성, 여러 환경에서의 관찰, 기능 저하 여부를 별도로 확인해야 한다."
+    },
+    "criterion_check_items": {
+      "A": "6개월 이상 증상 지속 여부, 연령 기준에 따른 증상 개수 충족 여부를 확인해야 한다.",
+      "B": "12세 이전 증상 발현 여부를 확인해야 한다.",
+      "C": "두 가지 이상 환경에서의 증상 존재 여부를 확인해야 한다.",
+      "D": "사회적, 학업적, 직업적 기능 저하 여부를 확인해야 한다.",
+      "E": "다른 정신질환 또는 발달적 요인에 의한 설명 가능성을 확인해야 한다."
+    }
+  }
+}

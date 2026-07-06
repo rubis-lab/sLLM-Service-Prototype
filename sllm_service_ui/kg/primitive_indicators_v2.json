@@ -1,0 +1,1646 @@
+{
+  "id": "primitive_indicators_v2",
+  "version": "2026-07-06-3r-cognitive-pi-schema",
+  "scope": "Structured primitive-indicator metadata for VST selective attention, Flanker interference control, and GNG response inhibition KG report generation",
+  "schema": {
+    "node": "Stable PI node identity and display metadata.",
+    "measurement": "Task-independent measurement definition, unit, signal, aggregation, and time window.",
+    "task_interpretations": "Task-specific cognitive mapping, direction rule, interpretation, evidence, and report template. Use only when the task is matched.",
+    "legacy_compatibility": "definition, unit, higher_value_general_meaning, lower_value_general_meaning, meaning, report_sentence, directional_report_rules are retained for the current runtime context builder."
+  },
+  "primitive_indicators": {
+    "et_first_fixation_duration_mean": {
+      "display_name": "et_first_fixation_duration_mean",
+      "definition": "자극 제시 이후 첫 fixation의 지속시간 평균",
+      "unit": "ms",
+      "value_type": "continuous",
+      "node": {
+        "name": "et_first_fixation_duration_mean",
+        "layer": "Primitive Indicator Layer",
+        "definition": "자극 제시 이후 첫 fixation의 지속시간 평균",
+        "unit": "ms",
+        "measurement": {
+          "modality": "eye_tracking"
+        }
+      },
+      "measurement_metadata": {
+        "definition": "자극 제시 이후 첫 fixation의 지속시간 평균",
+        "unit": "ms",
+        "signal": "et_first_fixation_duration_mean",
+        "aggregation": "mean",
+        "time_window": "VST 수행 중"
+      },
+      "higher_value_general_meaning": "automatic processing(초기 자동처리) 과정의 지연 가능성",
+      "lower_value_general_meaning": "automatic processing(초기 자동처리) 지연을 시사하는 근거는 상대적으로 약함",
+      "task_interpretations": {
+        "VST": {
+          "direction": "high",
+          "meaning": "automatic processing(초기 자동처리): 자극이 처음 시야에 들어왔을 때 빠르고 비교적 자동적으로 일어나는 초기 처리 과정",
+          "behavior_proxy": "선택주의력",
+          "report_sentence": "VST에서 et_first_fixation_duration_mean이 높게 나타난 경우, 자극이 처음 시야에 들어왔을 때 일어나는 automatic processing(초기 자동처리) 과정에 지연이 있을 가능성을 시사합니다. 이는 선택주의력 저하와 관련된 근거로 해석할 수 있습니다.",
+          "polarity": "difficulty_when_high",
+          "cognitive_mapping": {
+            "domain": "selective attention",
+            "process": "automatic processing",
+            "process_ko": "초기 자동처리",
+            "process_definition": "자극이 처음 시야에 들어왔을 때 빠르고 비교적 자동적으로 일어나는 초기 처리 과정"
+          },
+          "direction_rule": {
+            "difficulty_direction": "higher_value",
+            "insight": "automatic processing(초기 자동처리) 어려움 가능성 ↑ - et_first_fixation_duration_mean ↑",
+            "clinical_path": "선택주의력 ↓ - automatic processing(초기 자동처리) 어려움 가능성 - et_first_fixation_duration_mean ↑"
+          },
+          "interpretation": {
+            "higher_value": {
+              "summary": "automatic processing(초기 자동처리) 과정의 지연 가능성",
+              "cognitive_meaning": "automatic processing(초기 자동처리) 과정의 지연 가능성",
+              "clinical_note": "선택주의력 저하와 관련된 양상으로 해석 가능"
+            },
+            "typical_value": {
+              "summary": "기준 범위",
+              "cognitive_meaning": "VST에서 et_first_fixation_duration_mean이 기준 범위에 해당하는 경우, automatic processing(초기 자동처리) 과정의 지연 소견은 두드러지지 않는 것으로 볼 수 있습니다."
+            },
+            "lower_value": {
+              "summary": "automatic processing(초기 자동처리) 지연을 시사하는 근거는 상대적으로 약함",
+              "cognitive_meaning": "automatic processing(초기 자동처리) 지연을 시사하는 근거는 상대적으로 약함",
+              "caution": "낮은 값만으로 선택주의력이 우수하다고 단정하지 않음"
+            }
+          },
+          "evidence": {
+            "literature_insight": "ADHD/ADHD+DD 아동의 visual search에서 first fixation duration 차이가 보고되어, 초기 시각 처리 부담 가능성을 해석하는 근거로 사용할 수 있음.",
+            "references": [
+              {
+                "id": "cui_2020",
+                "citation": "Cui, X., Wang, J., Chang, Y., Su, M., Sherman, H. T., Wu, Z., Wang, Y., & Zhou, W. (2020). Visual Search in Chinese Children With Attention Deficit/Hyperactivity Disorder and Comorbid Developmental Dyslexia: Evidence for Pathogenesis From Eye Movements. Frontiers in Psychology, 11, 880.",
+                "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.00880/full",
+                "evidence_note": "ADHD/ADHD+DD 아동의 visual search에서 first fixation duration 차이가 보고되어, 초기 시각 처리 부담 가능성을 해석하는 근거로 사용할 수 있음."
+              }
+            ]
+          },
+          "report_template": {
+            "high_value_phrase": "VST에서 et_first_fixation_duration_mean이 높게 나타난 경우, 자극이 처음 시야에 들어왔을 때 일어나는 automatic processing(초기 자동처리) 과정에 지연이 있을 가능성을 시사합니다. 이는 선택주의력 저하와 관련된 근거로 해석할 수 있습니다.",
+            "typical_value_phrase": "VST에서 et_first_fixation_duration_mean이 기준 범위에 해당하는 경우, automatic processing(초기 자동처리) 과정의 지연 소견은 두드러지지 않는 것으로 볼 수 있습니다.",
+            "low_value_phrase": "VST에서 et_first_fixation_duration_mean이 낮게 나타난 경우, automatic processing(초기 자동처리) 지연을 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 선택주의력이 우수하다고 단정하지 않습니다."
+          },
+          "clinical_bridge": {
+            "criterion": "DSM-5 ADHD Criterion A1",
+            "criterion_domain": "부주의 증상군",
+            "bridge_type": "auxiliary_observation_not_diagnostic",
+            "related_items": [
+              "A1-a 세부사항을 놓치거나 부주의한 실수를 보임",
+              "A1-c 경청하지 않는 것처럼 보임",
+              "A1-h 외부 자극에 쉽게 산만해짐"
+            ]
+          },
+          "evidence_insight": "ADHD/ADHD+DD 아동의 visual search에서 first fixation duration 차이가 보고되어, 초기 시각 처리 부담 가능성을 해석하는 근거로 사용할 수 있음.",
+          "inverse_interpretation_policy": "Do not invert this PI into a positive clinical conclusion without convergent task-performance evidence.",
+          "directional_report_rules": {
+            "high": {
+              "report_hint": "VST에서 et_first_fixation_duration_mean이 높게 나타난 경우, 자극이 처음 시야에 들어왔을 때 일어나는 automatic processing(초기 자동처리) 과정에 지연이 있을 가능성을 시사합니다. 이는 선택주의력 저하와 관련된 근거로 해석할 수 있습니다.",
+              "aggregate_hint": "automatic processing(초기 자동처리) 관련 소견은 선택주의력 관련 근거가 될 수 있다."
+            },
+            "typical": {
+              "report_hint": "VST에서 et_first_fixation_duration_mean이 기준 범위에 해당하는 경우, automatic processing(초기 자동처리) 과정의 지연 소견은 두드러지지 않는 것으로 볼 수 있습니다.",
+              "aggregate_hint": "기준 범위 소견은 어려움의 직접 근거로 사용하지 않는다."
+            },
+            "low": {
+              "report_hint": "VST에서 et_first_fixation_duration_mean이 낮게 나타난 경우, automatic processing(초기 자동처리) 지연을 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 선택주의력이 우수하다고 단정하지 않습니다.",
+              "aggregate_hint": "낮은 값만으로 선택주의력이 우수하다고 단정하지 않는다."
+            }
+          },
+          "draft_edge_assignment": {
+            "primitive_indicator": "et_first_fixation_duration_mean",
+            "task": "VST",
+            "insight": "automatic processing(초기 자동처리) 어려움 가능성 ↑ - et_first_fixation_duration_mean ↑",
+            "source": "3R SLLM dataset feature-direction specification",
+            "status": "structured_cognitive_mapping_v2"
+          },
+          "task_meaning": "automatic processing(초기 자동처리): 자극이 처음 시야에 들어왔을 때 빠르고 비교적 자동적으로 일어나는 초기 처리 과정",
+          "kg_grade": "A-quick-v2-preserved"
+        }
+      },
+      "evidence": [
+        {
+          "id": "cui_2020",
+          "citation": "Cui, X., Wang, J., Chang, Y., Su, M., Sherman, H. T., Wu, Z., Wang, Y., & Zhou, W. (2020). Visual Search in Chinese Children With Attention Deficit/Hyperactivity Disorder and Comorbid Developmental Dyslexia: Evidence for Pathogenesis From Eye Movements. Frontiers in Psychology, 11, 880.",
+          "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.00880/full",
+          "evidence_note": "ADHD/ADHD+DD 아동의 visual search에서 first fixation duration 차이가 보고되어, 초기 시각 처리 부담 가능성을 해석하는 근거로 사용할 수 있음."
+        }
+      ],
+      "report_constraints": [
+        "Use as an auxiliary observation only.",
+        "Do not use this primitive indicator alone to diagnose ADHD or satisfy DSM-5 criteria.",
+        "Interpret together with task accuracy, reaction time, error counts, and task/display context when available."
+      ],
+      "evidence_insight": "ADHD/ADHD+DD 아동의 visual search에서 first fixation duration 차이가 보고되어, 초기 시각 처리 부담 가능성을 해석하는 근거로 사용할 수 있음.",
+      "references": {
+        "cui_2020": {
+          "id": "cui_2020",
+          "citation": "Cui, X., Wang, J., Chang, Y., Su, M., Sherman, H. T., Wu, Z., Wang, Y., & Zhou, W. (2020). Visual Search in Chinese Children With Attention Deficit/Hyperactivity Disorder and Comorbid Developmental Dyslexia: Evidence for Pathogenesis From Eye Movements. Frontiers in Psychology, 11, 880.",
+          "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.00880/full",
+          "evidence_note": "ADHD/ADHD+DD 아동의 visual search에서 first fixation duration 차이가 보고되어, 초기 시각 처리 부담 가능성을 해석하는 근거로 사용할 수 있음."
+        }
+      }
+    },
+    "et_fixation_duration_mean": {
+      "display_name": "et_fixation_duration_mean",
+      "definition": "한 번의 fixation 지속시간의 평균",
+      "unit": "ms",
+      "value_type": "continuous",
+      "node": {
+        "name": "et_fixation_duration_mean",
+        "layer": "Primitive Indicator Layer",
+        "definition": "한 번의 fixation 지속시간의 평균",
+        "unit": "ms",
+        "measurement": {
+          "modality": "eye_tracking"
+        }
+      },
+      "measurement_metadata": {
+        "definition": "한 번의 fixation 지속시간의 평균",
+        "unit": "ms",
+        "signal": "et_fixation_duration_mean",
+        "aggregation": "mean",
+        "time_window": "VST 수행 중"
+      },
+      "higher_value_general_meaning": "central discrimination(중심시야 기반 자극 판별) 과정의 지연 가능성",
+      "lower_value_general_meaning": "central discrimination(중심시야 기반 자극 판별) 지연을 시사하는 근거는 상대적으로 약함",
+      "task_interpretations": {
+        "VST": {
+          "direction": "high",
+          "meaning": "central discrimination(중심시야 기반 자극 판별): 현재 주시 중인 자극을 중심시야 정보로 목표 자극인지 방해 자극인지 판별하는 과정",
+          "behavior_proxy": "선택주의력",
+          "report_sentence": "VST에서 et_fixation_duration_mean이 높게 나타난 경우, central discrimination(중심시야 기반 자극 판별) 과정에 지연이 있을 가능성을 시사합니다. 이는 선택주의력 저하와 관련된 근거로 해석할 수 있습니다.",
+          "polarity": "difficulty_when_high",
+          "cognitive_mapping": {
+            "domain": "selective attention",
+            "process": "central discrimination",
+            "process_ko": "중심시야 기반 자극 판별",
+            "process_definition": "현재 주시 중인 자극을 중심시야 정보로 목표 자극인지 방해 자극인지 판별하는 과정"
+          },
+          "direction_rule": {
+            "difficulty_direction": "higher_value",
+            "insight": "central discrimination(중심시야 기반 자극 판별) 어려움 가능성 ↑ - et_fixation_duration_mean ↑",
+            "clinical_path": "선택주의력 ↓ - central discrimination(중심시야 기반 자극 판별) 어려움 가능성 - et_fixation_duration_mean ↑"
+          },
+          "interpretation": {
+            "higher_value": {
+              "summary": "central discrimination(중심시야 기반 자극 판별) 과정의 지연 가능성",
+              "cognitive_meaning": "central discrimination(중심시야 기반 자극 판별) 과정의 지연 가능성",
+              "clinical_note": "선택주의력 저하와 관련된 양상으로 해석 가능"
+            },
+            "typical_value": {
+              "summary": "기준 범위",
+              "cognitive_meaning": "VST에서 et_fixation_duration_mean이 기준 범위에 해당하는 경우, central discrimination(중심시야 기반 자극 판별) 과정의 지연 소견은 두드러지지 않는 것으로 볼 수 있습니다."
+            },
+            "lower_value": {
+              "summary": "central discrimination(중심시야 기반 자극 판별) 지연을 시사하는 근거는 상대적으로 약함",
+              "cognitive_meaning": "central discrimination(중심시야 기반 자극 판별) 지연을 시사하는 근거는 상대적으로 약함",
+              "caution": "낮은 값만으로 선택주의력이 우수하다고 단정하지 않음"
+            }
+          },
+          "evidence": {
+            "literature_insight": "ADHD를 포함한 신경발달장애 집단의 serial visual search에서 eye movement 기반 process analysis를 수행했으며, fixation duration과 intra-subject variability를 시각 탐색 처리 부담 및 수행 변동성 해석에 연결하는 근거로 사용할 수 있음.",
+            "references": [
+              {
+                "id": "canu_2022",
+                "citation": "Canu, D., Ioannou, C., Müller, K., Martin, B., Fleischhaker, C., Biscaldi, M., Beauducel, A., Smyrnis, N., van Elst, L. T., & Klein, C. (2022). Visual search in neurodevelopmental disorders: evidence towards a continuum of impairment. European Child & Adolescent Psychiatry, 31(8), 1-18.",
+                "url": "https://link.springer.com/article/10.1007/s00787-021-01756-z",
+                "evidence_note": "ADHD를 포함한 신경발달장애 집단의 serial visual search에서 eye movement 기반 process analysis를 수행했으며, fixation duration과 intra-subject variability를 시각 탐색 처리 부담 및 수행 변동성 해석에 연결하는 근거로 사용할 수 있음."
+              }
+            ]
+          },
+          "report_template": {
+            "high_value_phrase": "VST에서 et_fixation_duration_mean이 높게 나타난 경우, central discrimination(중심시야 기반 자극 판별) 과정에 지연이 있을 가능성을 시사합니다. 이는 선택주의력 저하와 관련된 근거로 해석할 수 있습니다.",
+            "typical_value_phrase": "VST에서 et_fixation_duration_mean이 기준 범위에 해당하는 경우, central discrimination(중심시야 기반 자극 판별) 과정의 지연 소견은 두드러지지 않는 것으로 볼 수 있습니다.",
+            "low_value_phrase": "VST에서 et_fixation_duration_mean이 낮게 나타난 경우, central discrimination(중심시야 기반 자극 판별) 지연을 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 선택주의력이 우수하다고 단정하지 않습니다."
+          },
+          "clinical_bridge": {
+            "criterion": "DSM-5 ADHD Criterion A1",
+            "criterion_domain": "부주의 증상군",
+            "bridge_type": "auxiliary_observation_not_diagnostic",
+            "related_items": [
+              "A1-a 세부사항을 놓치거나 부주의한 실수를 보임",
+              "A1-c 경청하지 않는 것처럼 보임",
+              "A1-h 외부 자극에 쉽게 산만해짐"
+            ]
+          },
+          "evidence_insight": "ADHD를 포함한 신경발달장애 집단의 serial visual search에서 eye movement 기반 process analysis를 수행했으며, fixation duration과 intra-subject variability를 시각 탐색 처리 부담 및 수행 변동성 해석에 연결하는 근거로 사용할 수 있음.",
+          "inverse_interpretation_policy": "Do not invert this PI into a positive clinical conclusion without convergent task-performance evidence.",
+          "directional_report_rules": {
+            "high": {
+              "report_hint": "VST에서 et_fixation_duration_mean이 높게 나타난 경우, central discrimination(중심시야 기반 자극 판별) 과정에 지연이 있을 가능성을 시사합니다. 이는 선택주의력 저하와 관련된 근거로 해석할 수 있습니다.",
+              "aggregate_hint": "central discrimination(중심시야 기반 자극 판별) 관련 소견은 선택주의력 관련 근거가 될 수 있다."
+            },
+            "typical": {
+              "report_hint": "VST에서 et_fixation_duration_mean이 기준 범위에 해당하는 경우, central discrimination(중심시야 기반 자극 판별) 과정의 지연 소견은 두드러지지 않는 것으로 볼 수 있습니다.",
+              "aggregate_hint": "기준 범위 소견은 어려움의 직접 근거로 사용하지 않는다."
+            },
+            "low": {
+              "report_hint": "VST에서 et_fixation_duration_mean이 낮게 나타난 경우, central discrimination(중심시야 기반 자극 판별) 지연을 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 선택주의력이 우수하다고 단정하지 않습니다.",
+              "aggregate_hint": "낮은 값만으로 선택주의력이 우수하다고 단정하지 않는다."
+            }
+          },
+          "draft_edge_assignment": {
+            "primitive_indicator": "et_fixation_duration_mean",
+            "task": "VST",
+            "insight": "central discrimination(중심시야 기반 자극 판별) 어려움 가능성 ↑ - et_fixation_duration_mean ↑",
+            "source": "3R SLLM dataset feature-direction specification",
+            "status": "structured_cognitive_mapping_v2"
+          },
+          "task_meaning": "central discrimination(중심시야 기반 자극 판별): 현재 주시 중인 자극을 중심시야 정보로 목표 자극인지 방해 자극인지 판별하는 과정",
+          "kg_grade": "A-quick-v2-preserved"
+        }
+      },
+      "evidence": [
+        {
+          "id": "canu_2022",
+          "citation": "Canu, D., Ioannou, C., Müller, K., Martin, B., Fleischhaker, C., Biscaldi, M., Beauducel, A., Smyrnis, N., van Elst, L. T., & Klein, C. (2022). Visual search in neurodevelopmental disorders: evidence towards a continuum of impairment. European Child & Adolescent Psychiatry, 31(8), 1-18.",
+          "url": "https://link.springer.com/article/10.1007/s00787-021-01756-z",
+          "evidence_note": "ADHD를 포함한 신경발달장애 집단의 serial visual search에서 eye movement 기반 process analysis를 수행했으며, fixation duration과 intra-subject variability를 시각 탐색 처리 부담 및 수행 변동성 해석에 연결하는 근거로 사용할 수 있음."
+        }
+      ],
+      "report_constraints": [
+        "Use as an auxiliary observation only.",
+        "Do not use this primitive indicator alone to diagnose ADHD or satisfy DSM-5 criteria.",
+        "Interpret together with task accuracy, reaction time, error counts, and task/display context when available."
+      ],
+      "evidence_insight": "ADHD를 포함한 신경발달장애 집단의 serial visual search에서 eye movement 기반 process analysis를 수행했으며, fixation duration과 intra-subject variability를 시각 탐색 처리 부담 및 수행 변동성 해석에 연결하는 근거로 사용할 수 있음.",
+      "references": {
+        "canu_2022": {
+          "id": "canu_2022",
+          "citation": "Canu, D., Ioannou, C., Müller, K., Martin, B., Fleischhaker, C., Biscaldi, M., Beauducel, A., Smyrnis, N., van Elst, L. T., & Klein, C. (2022). Visual search in neurodevelopmental disorders: evidence towards a continuum of impairment. European Child & Adolescent Psychiatry, 31(8), 1-18.",
+          "url": "https://link.springer.com/article/10.1007/s00787-021-01756-z",
+          "evidence_note": "ADHD를 포함한 신경발달장애 집단의 serial visual search에서 eye movement 기반 process analysis를 수행했으며, fixation duration과 intra-subject variability를 시각 탐색 처리 부담 및 수행 변동성 해석에 연결하는 근거로 사용할 수 있음."
+        }
+      }
+    },
+    "et_fixation_duration_std": {
+      "display_name": "et_fixation_duration_std",
+      "definition": "fixation 지속시간의 표준편차",
+      "unit": "ms",
+      "value_type": "continuous",
+      "node": {
+        "name": "et_fixation_duration_std",
+        "layer": "Primitive Indicator Layer",
+        "definition": "fixation 지속시간의 표준편차",
+        "unit": "ms",
+        "measurement": {
+          "modality": "eye_tracking"
+        }
+      },
+      "measurement_metadata": {
+        "definition": "fixation 지속시간의 표준편차",
+        "unit": "ms",
+        "signal": "et_fixation_duration_std",
+        "aggregation": "std",
+        "time_window": "VST 수행 중"
+      },
+      "higher_value_general_meaning": "intra-subject variability(수행 시간 변동성) 증가 가능성",
+      "lower_value_general_meaning": "intra-subject variability(수행 시간 변동성) 증가를 시사하는 근거는 상대적으로 약함",
+      "task_interpretations": {
+        "VST": {
+          "direction": "high",
+          "meaning": "intra-subject variability(수행 시간 변동성): 한 개인 안에서 fixation 또는 trial 간 수행 시간이 얼마나 불안정하게 변동하는지",
+          "behavior_proxy": "선택주의력",
+          "report_sentence": "VST에서 et_fixation_duration_std가 높게 나타난 경우, intra-subject variability(수행 시간 변동성)가 증가했을 가능성을 시사합니다. 이는 선택주의력 저하와 관련된 근거로 해석할 수 있습니다.",
+          "polarity": "difficulty_when_high",
+          "cognitive_mapping": {
+            "domain": "selective attention",
+            "process": "intra-subject variability",
+            "process_ko": "수행 시간 변동성",
+            "process_definition": "한 개인 안에서 fixation 또는 trial 간 수행 시간이 얼마나 불안정하게 변동하는지"
+          },
+          "direction_rule": {
+            "difficulty_direction": "higher_value",
+            "insight": "intra-subject variability(수행 시간 변동성) 어려움 가능성 ↑ - et_fixation_duration_std ↑",
+            "clinical_path": "선택주의력 ↓ - intra-subject variability(수행 시간 변동성) 어려움 가능성 - et_fixation_duration_std ↑"
+          },
+          "interpretation": {
+            "higher_value": {
+              "summary": "intra-subject variability(수행 시간 변동성) 증가 가능성",
+              "cognitive_meaning": "intra-subject variability(수행 시간 변동성) 증가 가능성",
+              "clinical_note": "선택주의력 저하와 관련된 양상으로 해석 가능"
+            },
+            "typical_value": {
+              "summary": "기준 범위",
+              "cognitive_meaning": "VST에서 et_fixation_duration_std가 기준 범위에 해당하는 경우, intra-subject variability(수행 시간 변동성) 증가 소견은 두드러지지 않는 것으로 볼 수 있습니다."
+            },
+            "lower_value": {
+              "summary": "intra-subject variability(수행 시간 변동성) 증가를 시사하는 근거는 상대적으로 약함",
+              "cognitive_meaning": "intra-subject variability(수행 시간 변동성) 증가를 시사하는 근거는 상대적으로 약함",
+              "caution": "낮은 값만으로 선택주의력이 우수하다고 단정하지 않음"
+            }
+          },
+          "evidence": {
+            "literature_insight": "ADHD를 포함한 신경발달장애 집단의 serial visual search에서 eye movement 기반 process analysis를 수행했으며, fixation duration과 intra-subject variability를 시각 탐색 처리 부담 및 수행 변동성 해석에 연결하는 근거로 사용할 수 있음.",
+            "references": [
+              {
+                "id": "canu_2022",
+                "citation": "Canu, D., Ioannou, C., Müller, K., Martin, B., Fleischhaker, C., Biscaldi, M., Beauducel, A., Smyrnis, N., van Elst, L. T., & Klein, C. (2022). Visual search in neurodevelopmental disorders: evidence towards a continuum of impairment. European Child & Adolescent Psychiatry, 31(8), 1-18.",
+                "url": "https://link.springer.com/article/10.1007/s00787-021-01756-z",
+                "evidence_note": "ADHD를 포함한 신경발달장애 집단의 serial visual search에서 eye movement 기반 process analysis를 수행했으며, fixation duration과 intra-subject variability를 시각 탐색 처리 부담 및 수행 변동성 해석에 연결하는 근거로 사용할 수 있음."
+              }
+            ]
+          },
+          "report_template": {
+            "high_value_phrase": "VST에서 et_fixation_duration_std가 높게 나타난 경우, intra-subject variability(수행 시간 변동성)가 증가했을 가능성을 시사합니다. 이는 선택주의력 저하와 관련된 근거로 해석할 수 있습니다.",
+            "typical_value_phrase": "VST에서 et_fixation_duration_std가 기준 범위에 해당하는 경우, intra-subject variability(수행 시간 변동성) 증가 소견은 두드러지지 않는 것으로 볼 수 있습니다.",
+            "low_value_phrase": "VST에서 et_fixation_duration_std가 낮게 나타난 경우, intra-subject variability(수행 시간 변동성) 증가를 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 선택주의력이나 수행 안정성이 우수하다고 단정하지 않습니다."
+          },
+          "clinical_bridge": {
+            "criterion": "DSM-5 ADHD Criterion A1",
+            "criterion_domain": "부주의 증상군",
+            "bridge_type": "auxiliary_observation_not_diagnostic",
+            "related_items": [
+              "A1-a 세부사항을 놓치거나 부주의한 실수를 보임",
+              "A1-c 경청하지 않는 것처럼 보임",
+              "A1-h 외부 자극에 쉽게 산만해짐"
+            ]
+          },
+          "evidence_insight": "ADHD를 포함한 신경발달장애 집단의 serial visual search에서 eye movement 기반 process analysis를 수행했으며, fixation duration과 intra-subject variability를 시각 탐색 처리 부담 및 수행 변동성 해석에 연결하는 근거로 사용할 수 있음.",
+          "inverse_interpretation_policy": "Do not invert this PI into a positive clinical conclusion without convergent task-performance evidence.",
+          "directional_report_rules": {
+            "high": {
+              "report_hint": "VST에서 et_fixation_duration_std가 높게 나타난 경우, intra-subject variability(수행 시간 변동성)가 증가했을 가능성을 시사합니다. 이는 선택주의력 저하와 관련된 근거로 해석할 수 있습니다.",
+              "aggregate_hint": "intra-subject variability(수행 시간 변동성) 관련 소견은 선택주의력 관련 근거가 될 수 있다."
+            },
+            "typical": {
+              "report_hint": "VST에서 et_fixation_duration_std가 기준 범위에 해당하는 경우, intra-subject variability(수행 시간 변동성) 증가 소견은 두드러지지 않는 것으로 볼 수 있습니다.",
+              "aggregate_hint": "기준 범위 소견은 어려움의 직접 근거로 사용하지 않는다."
+            },
+            "low": {
+              "report_hint": "VST에서 et_fixation_duration_std가 낮게 나타난 경우, intra-subject variability(수행 시간 변동성) 증가를 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 선택주의력이나 수행 안정성이 우수하다고 단정하지 않습니다.",
+              "aggregate_hint": "낮은 값만으로 선택주의력이 우수하다고 단정하지 않는다."
+            }
+          },
+          "draft_edge_assignment": {
+            "primitive_indicator": "et_fixation_duration_std",
+            "task": "VST",
+            "insight": "intra-subject variability(수행 시간 변동성) 어려움 가능성 ↑ - et_fixation_duration_std ↑",
+            "source": "3R SLLM dataset feature-direction specification",
+            "status": "structured_cognitive_mapping_v2"
+          },
+          "task_meaning": "intra-subject variability(수행 시간 변동성): 한 개인 안에서 fixation 또는 trial 간 수행 시간이 얼마나 불안정하게 변동하는지",
+          "kg_grade": "A-quick-v2-preserved"
+        }
+      },
+      "evidence": [
+        {
+          "id": "canu_2022",
+          "citation": "Canu, D., Ioannou, C., Müller, K., Martin, B., Fleischhaker, C., Biscaldi, M., Beauducel, A., Smyrnis, N., van Elst, L. T., & Klein, C. (2022). Visual search in neurodevelopmental disorders: evidence towards a continuum of impairment. European Child & Adolescent Psychiatry, 31(8), 1-18.",
+          "url": "https://link.springer.com/article/10.1007/s00787-021-01756-z",
+          "evidence_note": "ADHD를 포함한 신경발달장애 집단의 serial visual search에서 eye movement 기반 process analysis를 수행했으며, fixation duration과 intra-subject variability를 시각 탐색 처리 부담 및 수행 변동성 해석에 연결하는 근거로 사용할 수 있음."
+        }
+      ],
+      "report_constraints": [
+        "Use as an auxiliary observation only.",
+        "Do not use this primitive indicator alone to diagnose ADHD or satisfy DSM-5 criteria.",
+        "Interpret together with task accuracy, reaction time, error counts, and task/display context when available."
+      ],
+      "evidence_insight": "ADHD를 포함한 신경발달장애 집단의 serial visual search에서 eye movement 기반 process analysis를 수행했으며, fixation duration과 intra-subject variability를 시각 탐색 처리 부담 및 수행 변동성 해석에 연결하는 근거로 사용할 수 있음.",
+      "references": {
+        "canu_2022": {
+          "id": "canu_2022",
+          "citation": "Canu, D., Ioannou, C., Müller, K., Martin, B., Fleischhaker, C., Biscaldi, M., Beauducel, A., Smyrnis, N., van Elst, L. T., & Klein, C. (2022). Visual search in neurodevelopmental disorders: evidence towards a continuum of impairment. European Child & Adolescent Psychiatry, 31(8), 1-18.",
+          "url": "https://link.springer.com/article/10.1007/s00787-021-01756-z",
+          "evidence_note": "ADHD를 포함한 신경발달장애 집단의 serial visual search에서 eye movement 기반 process analysis를 수행했으며, fixation duration과 intra-subject variability를 시각 탐색 처리 부담 및 수행 변동성 해석에 연결하는 근거로 사용할 수 있음."
+        }
+      }
+    },
+    "et_fixation_dispersion_mean": {
+      "display_name": "et_fixation_dispersion_mean",
+      "definition": "fixation 위치의 공간적 분산 또는 퍼짐 정도의 평균",
+      "unit": "px",
+      "value_type": "continuous",
+      "node": {
+        "name": "et_fixation_dispersion_mean",
+        "layer": "Primitive Indicator Layer",
+        "definition": "fixation 위치의 공간적 분산 또는 퍼짐 정도의 평균",
+        "unit": "px",
+        "measurement": {
+          "modality": "eye_tracking"
+        }
+      },
+      "measurement_metadata": {
+        "definition": "fixation 위치의 공간적 분산 또는 퍼짐 정도의 평균",
+        "unit": "px",
+        "signal": "et_fixation_dispersion_mean",
+        "aggregation": "mean",
+        "time_window": "VST 수행 중"
+      },
+      "higher_value_general_meaning": "높은 값은 search coverage(시선 탐색 범위) 제한의 직접 근거로 사용하지 않음",
+      "lower_value_general_meaning": "search coverage(시선 탐색 범위) 제한 가능성",
+      "task_interpretations": {
+        "VST": {
+          "direction": "low",
+          "meaning": "search coverage(시선 탐색 범위): 화면의 여러 위치를 얼마나 넓고 전략적으로 탐색했는지",
+          "behavior_proxy": "선택주의력",
+          "report_sentence": "VST에서 et_fixation_dispersion_mean이 낮게 나타난 경우, search coverage(시선 탐색 범위)가 제한되었을 가능성을 시사합니다. 이는 선택주의력 저하와 관련된 근거로 해석할 수 있습니다.",
+          "polarity": "difficulty_when_low",
+          "cognitive_mapping": {
+            "domain": "selective attention",
+            "process": "search coverage",
+            "process_ko": "시선 탐색 범위",
+            "process_definition": "화면의 여러 위치를 얼마나 넓고 전략적으로 탐색했는지"
+          },
+          "direction_rule": {
+            "difficulty_direction": "lower_value",
+            "insight": "search coverage(시선 탐색 범위) 제한 가능성 ↑ - et_fixation_dispersion_mean ↓",
+            "clinical_path": "선택주의력 ↓ - search coverage(시선 탐색 범위) 어려움 가능성 - et_fixation_dispersion_mean ↓"
+          },
+          "interpretation": {
+            "higher_value": {
+              "summary": "높은 값은 search coverage(시선 탐색 범위) 제한의 직접 근거로 사용하지 않음",
+              "cognitive_meaning": "높은 값은 search coverage(시선 탐색 범위) 제한의 직접 근거로 사용하지 않음",
+              "caution": "높은 값만으로 선택주의력 저하 또는 우수성을 단정하지 않음"
+            },
+            "typical_value": {
+              "summary": "기준 범위",
+              "cognitive_meaning": "VST에서 et_fixation_dispersion_mean이 기준 범위에 해당하는 경우, search coverage(시선 탐색 범위) 제한 소견은 두드러지지 않는 것으로 볼 수 있습니다."
+            },
+            "lower_value": {
+              "summary": "search coverage(시선 탐색 범위) 제한 가능성",
+              "cognitive_meaning": "search coverage(시선 탐색 범위) 제한 가능성",
+              "clinical_note": "선택주의력 저하와 관련된 양상으로 해석 가능"
+            }
+          },
+          "evidence": {
+            "literature_insight": "ADHD 청소년에서 gaze control 및 visual exploration 차이가 보고되어, 제한적 탐색 패턴을 시사하는 근거로 사용할 수 있음.",
+            "references": [
+              {
+                "id": "yuval_greenberg_2019",
+                "citation": "Yuval-Greenberg, S., Keren, A., Hilo, R., Paz, A., & Ratzon, N. (2019). Gaze control during simulator driving in adolescents with and without attention deficit hyperactivity disorder. The American Journal of Occupational Therapy, 73(3), 7303345030p1-7303345030p8.",
+                "url": "https://doi.org/10.5014/ajot.2019.031500",
+                "doi": "10.5014/ajot.2019.031500",
+                "evidence_note": "ADHD 청소년에서 gaze control 및 visual exploration 차이가 보고되어, 제한적 탐색 패턴을 시사하는 근거로 사용할 수 있음."
+              }
+            ]
+          },
+          "report_template": {
+            "high_value_phrase": "VST에서 et_fixation_dispersion_mean이 높게 나타난 경우, 현재 방향성에서는 search coverage(시선 탐색 범위) 제한의 근거로 사용하지 않고 시선 고정 위치의 분산이 넓게 나타난 상태로 중립적으로 기술합니다.",
+            "typical_value_phrase": "VST에서 et_fixation_dispersion_mean이 기준 범위에 해당하는 경우, search coverage(시선 탐색 범위) 제한 소견은 두드러지지 않는 것으로 볼 수 있습니다.",
+            "low_value_phrase": "VST에서 et_fixation_dispersion_mean이 낮게 나타난 경우, search coverage(시선 탐색 범위)가 제한되었을 가능성을 시사합니다. 이는 선택주의력 저하와 관련된 근거로 해석할 수 있습니다."
+          },
+          "clinical_bridge": {
+            "criterion": "DSM-5 ADHD Criterion A1",
+            "criterion_domain": "부주의 증상군",
+            "bridge_type": "auxiliary_observation_not_diagnostic",
+            "related_items": [
+              "A1-a 세부사항을 놓치거나 부주의한 실수를 보임",
+              "A1-c 경청하지 않는 것처럼 보임",
+              "A1-h 외부 자극에 쉽게 산만해짐"
+            ]
+          },
+          "evidence_insight": "ADHD 청소년에서 gaze control 및 visual exploration 차이가 보고되어, 제한적 탐색 패턴을 시사하는 근거로 사용할 수 있음.",
+          "inverse_interpretation_policy": "Do not invert this PI into a positive clinical conclusion without convergent task-performance evidence.",
+          "directional_report_rules": {
+            "high": {
+              "report_hint": "VST에서 et_fixation_dispersion_mean이 높게 나타난 경우, 현재 방향성에서는 search coverage(시선 탐색 범위) 제한의 근거로 사용하지 않고 시선 고정 위치의 분산이 넓게 나타난 상태로 중립적으로 기술합니다.",
+              "aggregate_hint": "현재 방향성에서는 선택주의력 저하의 직접 근거로 사용하지 않는다."
+            },
+            "typical": {
+              "report_hint": "VST에서 et_fixation_dispersion_mean이 기준 범위에 해당하는 경우, search coverage(시선 탐색 범위) 제한 소견은 두드러지지 않는 것으로 볼 수 있습니다.",
+              "aggregate_hint": "기준 범위 소견은 어려움의 직접 근거로 사용하지 않는다."
+            },
+            "low": {
+              "report_hint": "VST에서 et_fixation_dispersion_mean이 낮게 나타난 경우, search coverage(시선 탐색 범위)가 제한되었을 가능성을 시사합니다. 이는 선택주의력 저하와 관련된 근거로 해석할 수 있습니다.",
+              "aggregate_hint": "search coverage(시선 탐색 범위) 관련 소견은 선택주의력 관련 근거가 될 수 있다."
+            }
+          },
+          "draft_edge_assignment": {
+            "primitive_indicator": "et_fixation_dispersion_mean",
+            "task": "VST",
+            "insight": "search coverage(시선 탐색 범위) 제한 가능성 ↑ - et_fixation_dispersion_mean ↓",
+            "source": "3R SLLM dataset feature-direction specification",
+            "status": "structured_cognitive_mapping_v2"
+          },
+          "task_meaning": "search coverage(시선 탐색 범위): 화면의 여러 위치를 얼마나 넓고 전략적으로 탐색했는지",
+          "kg_grade": "B-exploratory-v2-preserved"
+        }
+      },
+      "evidence": [
+        {
+          "id": "yuval_greenberg_2019",
+          "citation": "Yuval-Greenberg, S., Keren, A., Hilo, R., Paz, A., & Ratzon, N. (2019). Gaze control during simulator driving in adolescents with and without attention deficit hyperactivity disorder. The American Journal of Occupational Therapy, 73(3), 7303345030p1-7303345030p8.",
+          "url": "https://doi.org/10.5014/ajot.2019.031500",
+          "doi": "10.5014/ajot.2019.031500",
+          "evidence_note": "ADHD 청소년에서 gaze control 및 visual exploration 차이가 보고되어, 제한적 탐색 패턴을 시사하는 근거로 사용할 수 있음."
+        }
+      ],
+      "report_constraints": [
+        "Use as an auxiliary observation only.",
+        "Do not use this primitive indicator alone to diagnose ADHD or satisfy DSM-5 criteria.",
+        "Interpret together with task accuracy, reaction time, error counts, and task/display context when available."
+      ],
+      "aliases": [
+        "et_gaze_dispersion",
+        "et_fixation_dispersion",
+        "fixation dispersion",
+        "gaze dispersion"
+      ],
+      "evidence_insight": "ADHD 청소년에서 gaze control 및 visual exploration 차이가 보고되어, 제한적 탐색 패턴을 시사하는 근거로 사용할 수 있음.",
+      "references": {
+        "yuval_greenberg_2019": {
+          "id": "yuval_greenberg_2019",
+          "citation": "Yuval-Greenberg, S., Keren, A., Hilo, R., Paz, A., & Ratzon, N. (2019). Gaze control during simulator driving in adolescents with and without attention deficit hyperactivity disorder. The American Journal of Occupational Therapy, 73(3), 7303345030p1-7303345030p8.",
+          "url": "https://doi.org/10.5014/ajot.2019.031500",
+          "doi": "10.5014/ajot.2019.031500",
+          "evidence_note": "ADHD 청소년에서 gaze control 및 visual exploration 차이가 보고되어, 제한적 탐색 패턴을 시사하는 근거로 사용할 수 있음."
+        }
+      }
+    },
+    "et_first_fixation_latency_mean": {
+      "display_name": "et_first_fixation_latency_mean",
+      "definition": "자극 또는 목표 정보 영역에 첫 fixation이 발생하기까지의 latency 평균",
+      "unit": "ms",
+      "value_type": "continuous",
+      "node": {
+        "name": "et_first_fixation_latency_mean",
+        "layer": "Primitive Indicator Layer",
+        "definition": "자극 또는 목표 정보 영역에 첫 fixation이 발생하기까지의 latency 평균",
+        "unit": "ms",
+        "measurement": {
+          "modality": "eye_tracking"
+        }
+      },
+      "measurement_metadata": {
+        "definition": "자극 또는 목표 정보 영역에 첫 fixation이 발생하기까지의 latency 평균",
+        "unit": "ms",
+        "signal": "et_first_fixation_latency_mean",
+        "aggregation": "mean",
+        "time_window": "Flanker 수행 중"
+      },
+      "higher_value_general_meaning": "target orienting(목표 정보 지향) 과정의 지연 가능성",
+      "lower_value_general_meaning": "target orienting(목표 정보 지향) 지연을 시사하는 근거는 상대적으로 약함",
+      "task_interpretations": {
+        "Flanker": {
+          "direction": "high",
+          "meaning": "target orienting(목표 정보 지향): 방해 자극이 함께 제시되는 상황에서 목표 정보로 시선을 빠르게 지향하는 과정",
+          "behavior_proxy": "간섭통제",
+          "report_sentence": "Flanker에서 et_first_fixation_latency_mean이 높게 나타난 경우, 목표 정보로 시선이 빠르게 지향되는 target orienting(목표 정보 지향) 과정에 지연이 있을 가능성을 시사합니다. 이는 간섭통제 저하와 관련된 근거로 해석할 수 있습니다.",
+          "polarity": "difficulty_when_high",
+          "cognitive_mapping": {
+            "domain": "interference control",
+            "process": "target orienting",
+            "process_ko": "목표 정보 지향",
+            "process_definition": "방해 자극이 함께 제시되는 상황에서 목표 정보로 시선을 빠르게 지향하는 과정"
+          },
+          "direction_rule": {
+            "difficulty_direction": "higher_value",
+            "insight": "target orienting(목표 정보 지향) 어려움 가능성 ↑ - et_first_fixation_latency_mean ↑",
+            "clinical_path": "간섭통제 ↓ - target orienting(목표 정보 지향) 어려움 가능성 - et_first_fixation_latency_mean ↑"
+          },
+          "interpretation": {
+            "higher_value": {
+              "summary": "target orienting(목표 정보 지향) 과정의 지연 가능성",
+              "cognitive_meaning": "target orienting(목표 정보 지향) 과정의 지연 가능성",
+              "clinical_note": "간섭통제 저하와 관련된 양상으로 해석 가능"
+            },
+            "typical_value": {
+              "summary": "기준 범위",
+              "cognitive_meaning": "Flanker에서 et_first_fixation_latency_mean이 기준 범위에 해당하는 경우, target orienting(목표 정보 지향) 과정의 지연 소견은 두드러지지 않는 것으로 볼 수 있습니다."
+            },
+            "lower_value": {
+              "summary": "target orienting(목표 정보 지향) 지연을 시사하는 근거는 상대적으로 약함",
+              "cognitive_meaning": "target orienting(목표 정보 지향) 지연을 시사하는 근거는 상대적으로 약함",
+              "caution": "낮은 값만으로 간섭통제이 우수하다고 단정하지 않음"
+            }
+          },
+          "evidence": {
+            "literature_insight": "Flanker 과제의 원형 논문으로, 목표 자극 주변의 noise/flanker가 target identification 및 반응에 간섭을 일으킬 수 있음을 보여줌. / Flanker와 같은 conflict task에서 갈등 모니터링과 인지 통제가 수행 조절에 관여한다는 이론적 근거를 제공함. / 시각 탐색 중 target/distractor 관련 fixation과 eye movement 양상이 목표-비목표 정보 처리 해석에 사용될 수 있음을 보여줌.",
+            "references": [
+              {
+                "id": "eriksen_1974",
+                "citation": "Eriksen, B. A., & Eriksen, C. W. (1974). Effects of noise letters upon the identification of a target letter in a nonsearch task. Perception & Psychophysics, 16(1), 143-149.",
+                "url": "https://doi.org/10.3758/BF03203267",
+                "doi": "10.3758/BF03203267",
+                "evidence_note": "Flanker 과제의 원형 논문으로, 목표 자극 주변의 noise/flanker가 target identification 및 반응에 간섭을 일으킬 수 있음을 보여줌."
+              },
+              {
+                "id": "botvinick_2001",
+                "citation": "Botvinick, M. M., Braver, T. S., Barch, D. M., Carter, C. S., & Cohen, J. D. (2001). Conflict monitoring and cognitive control. Psychological Review, 108(3), 624-652.",
+                "url": "https://doi.org/10.1037/0033-295X.108.3.624",
+                "doi": "10.1037/0033-295X.108.3.624",
+                "evidence_note": "Flanker와 같은 conflict task에서 갈등 모니터링과 인지 통제가 수행 조절에 관여한다는 이론적 근거를 제공함."
+              },
+              {
+                "id": "zelinsky_1997",
+                "citation": "Zelinsky, G. J., & Sheinberg, D. L. (1997). Eye movements during parallel-serial visual search. Journal of Experimental Psychology: Human Perception and Performance, 23(1), 244-262.",
+                "url": "https://doi.org/10.1037/0096-1523.23.1.244",
+                "doi": "10.1037/0096-1523.23.1.244",
+                "evidence_note": "시각 탐색 중 target/distractor 관련 fixation과 eye movement 양상이 목표-비목표 정보 처리 해석에 사용될 수 있음을 보여줌."
+              }
+            ]
+          },
+          "report_template": {
+            "high_value_phrase": "Flanker에서 et_first_fixation_latency_mean이 높게 나타난 경우, 목표 정보로 시선이 빠르게 지향되는 target orienting(목표 정보 지향) 과정에 지연이 있을 가능성을 시사합니다. 이는 간섭통제 저하와 관련된 근거로 해석할 수 있습니다.",
+            "typical_value_phrase": "Flanker에서 et_first_fixation_latency_mean이 기준 범위에 해당하는 경우, target orienting(목표 정보 지향) 과정의 지연 소견은 두드러지지 않는 것으로 볼 수 있습니다.",
+            "low_value_phrase": "Flanker에서 et_first_fixation_latency_mean이 낮게 나타난 경우, target orienting(목표 정보 지향) 지연을 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 간섭통제가 우수하다고 단정하지 않습니다."
+          },
+          "clinical_bridge": {
+            "criterion": "DSM-5 ADHD Criterion A1",
+            "criterion_domain": "부주의 증상군",
+            "bridge_type": "auxiliary_observation_not_diagnostic",
+            "related_items": [
+              "A1-h 외부 자극에 쉽게 산만해짐"
+            ]
+          },
+          "evidence_insight": "Flanker 과제의 원형 논문으로, 목표 자극 주변의 noise/flanker가 target identification 및 반응에 간섭을 일으킬 수 있음을 보여줌. / Flanker와 같은 conflict task에서 갈등 모니터링과 인지 통제가 수행 조절에 관여한다는 이론적 근거를 제공함. / 시각 탐색 중 target/distractor 관련 fixation과 eye movement 양상이 목표-비목표 정보 처리 해석에 사용될 수 있음을 보여줌.",
+          "inverse_interpretation_policy": "Do not invert this PI into a positive clinical conclusion without convergent task-performance evidence.",
+          "directional_report_rules": {
+            "high": {
+              "report_hint": "Flanker에서 et_first_fixation_latency_mean이 높게 나타난 경우, 목표 정보로 시선이 빠르게 지향되는 target orienting(목표 정보 지향) 과정에 지연이 있을 가능성을 시사합니다. 이는 간섭통제 저하와 관련된 근거로 해석할 수 있습니다.",
+              "aggregate_hint": "target orienting(목표 정보 지향) 관련 소견은 간섭통제 관련 근거가 될 수 있다."
+            },
+            "typical": {
+              "report_hint": "Flanker에서 et_first_fixation_latency_mean이 기준 범위에 해당하는 경우, target orienting(목표 정보 지향) 과정의 지연 소견은 두드러지지 않는 것으로 볼 수 있습니다.",
+              "aggregate_hint": "기준 범위 소견은 어려움의 직접 근거로 사용하지 않는다."
+            },
+            "low": {
+              "report_hint": "Flanker에서 et_first_fixation_latency_mean이 낮게 나타난 경우, target orienting(목표 정보 지향) 지연을 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 간섭통제가 우수하다고 단정하지 않습니다.",
+              "aggregate_hint": "낮은 값만으로 간섭통제이 우수하다고 단정하지 않는다."
+            }
+          },
+          "draft_edge_assignment": {
+            "primitive_indicator": "et_first_fixation_latency_mean",
+            "task": "Flanker",
+            "insight": "target orienting(목표 정보 지향) 어려움 가능성 ↑ - et_first_fixation_latency_mean ↑",
+            "source": "3R SLLM dataset feature-direction specification",
+            "status": "structured_cognitive_mapping_v2"
+          },
+          "task_meaning": "target orienting(목표 정보 지향): 방해 자극이 함께 제시되는 상황에서 목표 정보로 시선을 빠르게 지향하는 과정",
+          "kg_grade": "B-literature-linked-v2"
+        }
+      },
+      "evidence": [
+        {
+          "id": "eriksen_1974",
+          "citation": "Eriksen, B. A., & Eriksen, C. W. (1974). Effects of noise letters upon the identification of a target letter in a nonsearch task. Perception & Psychophysics, 16(1), 143-149.",
+          "url": "https://doi.org/10.3758/BF03203267",
+          "doi": "10.3758/BF03203267",
+          "evidence_note": "Flanker 과제의 원형 논문으로, 목표 자극 주변의 noise/flanker가 target identification 및 반응에 간섭을 일으킬 수 있음을 보여줌."
+        },
+        {
+          "id": "botvinick_2001",
+          "citation": "Botvinick, M. M., Braver, T. S., Barch, D. M., Carter, C. S., & Cohen, J. D. (2001). Conflict monitoring and cognitive control. Psychological Review, 108(3), 624-652.",
+          "url": "https://doi.org/10.1037/0033-295X.108.3.624",
+          "doi": "10.1037/0033-295X.108.3.624",
+          "evidence_note": "Flanker와 같은 conflict task에서 갈등 모니터링과 인지 통제가 수행 조절에 관여한다는 이론적 근거를 제공함."
+        },
+        {
+          "id": "zelinsky_1997",
+          "citation": "Zelinsky, G. J., & Sheinberg, D. L. (1997). Eye movements during parallel-serial visual search. Journal of Experimental Psychology: Human Perception and Performance, 23(1), 244-262.",
+          "url": "https://doi.org/10.1037/0096-1523.23.1.244",
+          "doi": "10.1037/0096-1523.23.1.244",
+          "evidence_note": "시각 탐색 중 target/distractor 관련 fixation과 eye movement 양상이 목표-비목표 정보 처리 해석에 사용될 수 있음을 보여줌."
+        }
+      ],
+      "report_constraints": [
+        "Use as an auxiliary observation only.",
+        "Do not use this primitive indicator alone to diagnose ADHD or satisfy DSM-5 criteria.",
+        "Interpret together with task accuracy, reaction time, error counts, and task/display context when available."
+      ],
+      "evidence_insight": "Flanker 과제의 원형 논문으로, 목표 자극 주변의 noise/flanker가 target identification 및 반응에 간섭을 일으킬 수 있음을 보여줌. / Flanker와 같은 conflict task에서 갈등 모니터링과 인지 통제가 수행 조절에 관여한다는 이론적 근거를 제공함. / 시각 탐색 중 target/distractor 관련 fixation과 eye movement 양상이 목표-비목표 정보 처리 해석에 사용될 수 있음을 보여줌.",
+      "references": {
+        "eriksen_1974": {
+          "id": "eriksen_1974",
+          "citation": "Eriksen, B. A., & Eriksen, C. W. (1974). Effects of noise letters upon the identification of a target letter in a nonsearch task. Perception & Psychophysics, 16(1), 143-149.",
+          "url": "https://doi.org/10.3758/BF03203267",
+          "doi": "10.3758/BF03203267",
+          "evidence_note": "Flanker 과제의 원형 논문으로, 목표 자극 주변의 noise/flanker가 target identification 및 반응에 간섭을 일으킬 수 있음을 보여줌."
+        },
+        "botvinick_2001": {
+          "id": "botvinick_2001",
+          "citation": "Botvinick, M. M., Braver, T. S., Barch, D. M., Carter, C. S., & Cohen, J. D. (2001). Conflict monitoring and cognitive control. Psychological Review, 108(3), 624-652.",
+          "url": "https://doi.org/10.1037/0033-295X.108.3.624",
+          "doi": "10.1037/0033-295X.108.3.624",
+          "evidence_note": "Flanker와 같은 conflict task에서 갈등 모니터링과 인지 통제가 수행 조절에 관여한다는 이론적 근거를 제공함."
+        },
+        "zelinsky_1997": {
+          "id": "zelinsky_1997",
+          "citation": "Zelinsky, G. J., & Sheinberg, D. L. (1997). Eye movements during parallel-serial visual search. Journal of Experimental Psychology: Human Perception and Performance, 23(1), 244-262.",
+          "url": "https://doi.org/10.1037/0096-1523.23.1.244",
+          "doi": "10.1037/0096-1523.23.1.244",
+          "evidence_note": "시각 탐색 중 target/distractor 관련 fixation과 eye movement 양상이 목표-비목표 정보 처리 해석에 사용될 수 있음을 보여줌."
+        }
+      }
+    },
+    "et_aoi_non_aoi_transition_count": {
+      "display_name": "et_aoi_non_aoi_transition_count",
+      "definition": "AOI와 non-AOI 사이의 시선 전환 횟수",
+      "unit": "회",
+      "value_type": "continuous",
+      "node": {
+        "name": "et_aoi_non_aoi_transition_count",
+        "layer": "Primitive Indicator Layer",
+        "definition": "AOI와 non-AOI 사이의 시선 전환 횟수",
+        "unit": "회",
+        "measurement": {
+          "modality": "eye_tracking"
+        }
+      },
+      "measurement_metadata": {
+        "definition": "AOI와 non-AOI 사이의 시선 전환 횟수",
+        "unit": "회",
+        "signal": "et_aoi_non_aoi_transition_count",
+        "aggregation": "count",
+        "time_window": "Flanker 수행 중"
+      },
+      "higher_value_general_meaning": "distractor-target switching(방해-목표 간 시선 전환) 증가 가능성",
+      "lower_value_general_meaning": "distractor-target switching(방해-목표 간 시선 전환) 증가를 시사하는 근거는 상대적으로 약함",
+      "task_interpretations": {
+        "Flanker": {
+          "direction": "high",
+          "meaning": "distractor-target switching(방해-목표 간 시선 전환): 목표 정보와 방해 또는 비목표 정보 사이에서 시선이 전환되는 양상",
+          "behavior_proxy": "간섭통제",
+          "report_sentence": "Flanker에서 et_aoi_non_aoi_transition_count가 높게 나타난 경우, distractor-target switching(방해-목표 간 시선 전환)이 증가했을 가능성을 시사합니다. 이는 간섭통제 저하와 관련된 근거로 해석할 수 있습니다.",
+          "polarity": "difficulty_when_high",
+          "cognitive_mapping": {
+            "domain": "interference control",
+            "process": "distractor-target switching",
+            "process_ko": "방해-목표 간 시선 전환",
+            "process_definition": "목표 정보와 방해 또는 비목표 정보 사이에서 시선이 전환되는 양상"
+          },
+          "direction_rule": {
+            "difficulty_direction": "higher_value",
+            "insight": "distractor-target switching(방해-목표 간 시선 전환) 어려움 가능성 ↑ - et_aoi_non_aoi_transition_count ↑",
+            "clinical_path": "간섭통제 ↓ - distractor-target switching(방해-목표 간 시선 전환) 어려움 가능성 - et_aoi_non_aoi_transition_count ↑"
+          },
+          "interpretation": {
+            "higher_value": {
+              "summary": "distractor-target switching(방해-목표 간 시선 전환) 증가 가능성",
+              "cognitive_meaning": "distractor-target switching(방해-목표 간 시선 전환) 증가 가능성",
+              "clinical_note": "간섭통제 저하와 관련된 양상으로 해석 가능"
+            },
+            "typical_value": {
+              "summary": "기준 범위",
+              "cognitive_meaning": "Flanker에서 et_aoi_non_aoi_transition_count가 기준 범위에 해당하는 경우, distractor-target switching(방해-목표 간 시선 전환) 증가 소견은 두드러지지 않는 것으로 볼 수 있습니다."
+            },
+            "lower_value": {
+              "summary": "distractor-target switching(방해-목표 간 시선 전환) 증가를 시사하는 근거는 상대적으로 약함",
+              "cognitive_meaning": "distractor-target switching(방해-목표 간 시선 전환) 증가를 시사하는 근거는 상대적으로 약함",
+              "caution": "낮은 값만으로 간섭통제이 우수하다고 단정하지 않음"
+            }
+          },
+          "evidence": {
+            "literature_insight": "Flanker 과제의 원형 논문으로, 목표 자극 주변의 noise/flanker가 target identification 및 반응에 간섭을 일으킬 수 있음을 보여줌. / Flanker와 같은 conflict task에서 갈등 모니터링과 인지 통제가 수행 조절에 관여한다는 이론적 근거를 제공함. / 시각 탐색 중 target/distractor 관련 fixation과 eye movement 양상이 목표-비목표 정보 처리 해석에 사용될 수 있음을 보여줌.",
+            "references": [
+              {
+                "id": "eriksen_1974",
+                "citation": "Eriksen, B. A., & Eriksen, C. W. (1974). Effects of noise letters upon the identification of a target letter in a nonsearch task. Perception & Psychophysics, 16(1), 143-149.",
+                "url": "https://doi.org/10.3758/BF03203267",
+                "doi": "10.3758/BF03203267",
+                "evidence_note": "Flanker 과제의 원형 논문으로, 목표 자극 주변의 noise/flanker가 target identification 및 반응에 간섭을 일으킬 수 있음을 보여줌."
+              },
+              {
+                "id": "botvinick_2001",
+                "citation": "Botvinick, M. M., Braver, T. S., Barch, D. M., Carter, C. S., & Cohen, J. D. (2001). Conflict monitoring and cognitive control. Psychological Review, 108(3), 624-652.",
+                "url": "https://doi.org/10.1037/0033-295X.108.3.624",
+                "doi": "10.1037/0033-295X.108.3.624",
+                "evidence_note": "Flanker와 같은 conflict task에서 갈등 모니터링과 인지 통제가 수행 조절에 관여한다는 이론적 근거를 제공함."
+              },
+              {
+                "id": "zelinsky_1997",
+                "citation": "Zelinsky, G. J., & Sheinberg, D. L. (1997). Eye movements during parallel-serial visual search. Journal of Experimental Psychology: Human Perception and Performance, 23(1), 244-262.",
+                "url": "https://doi.org/10.1037/0096-1523.23.1.244",
+                "doi": "10.1037/0096-1523.23.1.244",
+                "evidence_note": "시각 탐색 중 target/distractor 관련 fixation과 eye movement 양상이 목표-비목표 정보 처리 해석에 사용될 수 있음을 보여줌."
+              }
+            ]
+          },
+          "report_template": {
+            "high_value_phrase": "Flanker에서 et_aoi_non_aoi_transition_count가 높게 나타난 경우, distractor-target switching(방해-목표 간 시선 전환)이 증가했을 가능성을 시사합니다. 이는 간섭통제 저하와 관련된 근거로 해석할 수 있습니다.",
+            "typical_value_phrase": "Flanker에서 et_aoi_non_aoi_transition_count가 기준 범위에 해당하는 경우, distractor-target switching(방해-목표 간 시선 전환) 증가 소견은 두드러지지 않는 것으로 볼 수 있습니다.",
+            "low_value_phrase": "Flanker에서 et_aoi_non_aoi_transition_count가 낮게 나타난 경우, distractor-target switching(방해-목표 간 시선 전환) 증가를 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 간섭통제가 우수하다고 단정하지 않습니다."
+          },
+          "clinical_bridge": {
+            "criterion": "DSM-5 ADHD Criterion A1",
+            "criterion_domain": "부주의 증상군",
+            "bridge_type": "auxiliary_observation_not_diagnostic",
+            "related_items": [
+              "A1-h 외부 자극에 쉽게 산만해짐"
+            ]
+          },
+          "evidence_insight": "Flanker 과제의 원형 논문으로, 목표 자극 주변의 noise/flanker가 target identification 및 반응에 간섭을 일으킬 수 있음을 보여줌. / Flanker와 같은 conflict task에서 갈등 모니터링과 인지 통제가 수행 조절에 관여한다는 이론적 근거를 제공함. / 시각 탐색 중 target/distractor 관련 fixation과 eye movement 양상이 목표-비목표 정보 처리 해석에 사용될 수 있음을 보여줌.",
+          "inverse_interpretation_policy": "Do not invert this PI into a positive clinical conclusion without convergent task-performance evidence.",
+          "directional_report_rules": {
+            "high": {
+              "report_hint": "Flanker에서 et_aoi_non_aoi_transition_count가 높게 나타난 경우, distractor-target switching(방해-목표 간 시선 전환)이 증가했을 가능성을 시사합니다. 이는 간섭통제 저하와 관련된 근거로 해석할 수 있습니다.",
+              "aggregate_hint": "distractor-target switching(방해-목표 간 시선 전환) 관련 소견은 간섭통제 관련 근거가 될 수 있다."
+            },
+            "typical": {
+              "report_hint": "Flanker에서 et_aoi_non_aoi_transition_count가 기준 범위에 해당하는 경우, distractor-target switching(방해-목표 간 시선 전환) 증가 소견은 두드러지지 않는 것으로 볼 수 있습니다.",
+              "aggregate_hint": "기준 범위 소견은 어려움의 직접 근거로 사용하지 않는다."
+            },
+            "low": {
+              "report_hint": "Flanker에서 et_aoi_non_aoi_transition_count가 낮게 나타난 경우, distractor-target switching(방해-목표 간 시선 전환) 증가를 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 간섭통제가 우수하다고 단정하지 않습니다.",
+              "aggregate_hint": "낮은 값만으로 간섭통제이 우수하다고 단정하지 않는다."
+            }
+          },
+          "draft_edge_assignment": {
+            "primitive_indicator": "et_aoi_non_aoi_transition_count",
+            "task": "Flanker",
+            "insight": "distractor-target switching(방해-목표 간 시선 전환) 어려움 가능성 ↑ - et_aoi_non_aoi_transition_count ↑",
+            "source": "3R SLLM dataset feature-direction specification",
+            "status": "structured_cognitive_mapping_v2"
+          },
+          "task_meaning": "distractor-target switching(방해-목표 간 시선 전환): 목표 정보와 방해 또는 비목표 정보 사이에서 시선이 전환되는 양상",
+          "kg_grade": "B-literature-linked-v2"
+        }
+      },
+      "evidence": [
+        {
+          "id": "eriksen_1974",
+          "citation": "Eriksen, B. A., & Eriksen, C. W. (1974). Effects of noise letters upon the identification of a target letter in a nonsearch task. Perception & Psychophysics, 16(1), 143-149.",
+          "url": "https://doi.org/10.3758/BF03203267",
+          "doi": "10.3758/BF03203267",
+          "evidence_note": "Flanker 과제의 원형 논문으로, 목표 자극 주변의 noise/flanker가 target identification 및 반응에 간섭을 일으킬 수 있음을 보여줌."
+        },
+        {
+          "id": "botvinick_2001",
+          "citation": "Botvinick, M. M., Braver, T. S., Barch, D. M., Carter, C. S., & Cohen, J. D. (2001). Conflict monitoring and cognitive control. Psychological Review, 108(3), 624-652.",
+          "url": "https://doi.org/10.1037/0033-295X.108.3.624",
+          "doi": "10.1037/0033-295X.108.3.624",
+          "evidence_note": "Flanker와 같은 conflict task에서 갈등 모니터링과 인지 통제가 수행 조절에 관여한다는 이론적 근거를 제공함."
+        },
+        {
+          "id": "zelinsky_1997",
+          "citation": "Zelinsky, G. J., & Sheinberg, D. L. (1997). Eye movements during parallel-serial visual search. Journal of Experimental Psychology: Human Perception and Performance, 23(1), 244-262.",
+          "url": "https://doi.org/10.1037/0096-1523.23.1.244",
+          "doi": "10.1037/0096-1523.23.1.244",
+          "evidence_note": "시각 탐색 중 target/distractor 관련 fixation과 eye movement 양상이 목표-비목표 정보 처리 해석에 사용될 수 있음을 보여줌."
+        }
+      ],
+      "report_constraints": [
+        "Use as an auxiliary observation only.",
+        "Do not use this primitive indicator alone to diagnose ADHD or satisfy DSM-5 criteria.",
+        "Interpret together with task accuracy, reaction time, error counts, and task/display context when available."
+      ],
+      "evidence_insight": "Flanker 과제의 원형 논문으로, 목표 자극 주변의 noise/flanker가 target identification 및 반응에 간섭을 일으킬 수 있음을 보여줌. / Flanker와 같은 conflict task에서 갈등 모니터링과 인지 통제가 수행 조절에 관여한다는 이론적 근거를 제공함. / 시각 탐색 중 target/distractor 관련 fixation과 eye movement 양상이 목표-비목표 정보 처리 해석에 사용될 수 있음을 보여줌.",
+      "references": {
+        "eriksen_1974": {
+          "id": "eriksen_1974",
+          "citation": "Eriksen, B. A., & Eriksen, C. W. (1974). Effects of noise letters upon the identification of a target letter in a nonsearch task. Perception & Psychophysics, 16(1), 143-149.",
+          "url": "https://doi.org/10.3758/BF03203267",
+          "doi": "10.3758/BF03203267",
+          "evidence_note": "Flanker 과제의 원형 논문으로, 목표 자극 주변의 noise/flanker가 target identification 및 반응에 간섭을 일으킬 수 있음을 보여줌."
+        },
+        "botvinick_2001": {
+          "id": "botvinick_2001",
+          "citation": "Botvinick, M. M., Braver, T. S., Barch, D. M., Carter, C. S., & Cohen, J. D. (2001). Conflict monitoring and cognitive control. Psychological Review, 108(3), 624-652.",
+          "url": "https://doi.org/10.1037/0033-295X.108.3.624",
+          "doi": "10.1037/0033-295X.108.3.624",
+          "evidence_note": "Flanker와 같은 conflict task에서 갈등 모니터링과 인지 통제가 수행 조절에 관여한다는 이론적 근거를 제공함."
+        },
+        "zelinsky_1997": {
+          "id": "zelinsky_1997",
+          "citation": "Zelinsky, G. J., & Sheinberg, D. L. (1997). Eye movements during parallel-serial visual search. Journal of Experimental Psychology: Human Perception and Performance, 23(1), 244-262.",
+          "url": "https://doi.org/10.1037/0096-1523.23.1.244",
+          "doi": "10.1037/0096-1523.23.1.244",
+          "evidence_note": "시각 탐색 중 target/distractor 관련 fixation과 eye movement 양상이 목표-비목표 정보 처리 해석에 사용될 수 있음을 보여줌."
+        }
+      }
+    },
+    "et_aoi_dwell_time_mean": {
+      "display_name": "et_aoi_dwell_time_mean",
+      "definition": "AOI에 시선이 머문 dwell time의 평균",
+      "unit": "ms",
+      "value_type": "continuous",
+      "node": {
+        "name": "et_aoi_dwell_time_mean",
+        "layer": "Primitive Indicator Layer",
+        "definition": "AOI에 시선이 머문 dwell time의 평균",
+        "unit": "ms",
+        "measurement": {
+          "modality": "eye_tracking"
+        }
+      },
+      "measurement_metadata": {
+        "definition": "AOI에 시선이 머문 dwell time의 평균",
+        "unit": "ms",
+        "signal": "et_aoi_dwell_time_mean",
+        "aggregation": "mean",
+        "time_window": "Flanker 수행 중"
+      },
+      "higher_value_general_meaning": "target processing inefficiency(목표 정보 처리 비효율) 가능성",
+      "lower_value_general_meaning": "target processing inefficiency(목표 정보 처리 비효율)을 시사하는 근거는 상대적으로 약함",
+      "task_interpretations": {
+        "Flanker": {
+          "direction": "high",
+          "meaning": "target processing inefficiency(목표 정보 처리 비효율): 목표 정보를 확인하고 처리하는 과정에서 상대적으로 더 많은 시간이 필요한 양상",
+          "behavior_proxy": "간섭통제",
+          "report_sentence": "Flanker에서 et_aoi_dwell_time_mean이 높게 나타난 경우, target processing inefficiency(목표 정보 처리 비효율)가 있었을 가능성을 시사합니다. 이는 간섭통제 저하와 관련된 근거로 해석할 수 있습니다.",
+          "polarity": "difficulty_when_high",
+          "cognitive_mapping": {
+            "domain": "interference control",
+            "process": "target processing inefficiency",
+            "process_ko": "목표 정보 처리 비효율",
+            "process_definition": "목표 정보를 확인하고 처리하는 과정에서 상대적으로 더 많은 시간이 필요한 양상"
+          },
+          "direction_rule": {
+            "difficulty_direction": "higher_value",
+            "insight": "target processing inefficiency(목표 정보 처리 비효율) 어려움 가능성 ↑ - et_aoi_dwell_time_mean ↑",
+            "clinical_path": "간섭통제 ↓ - target processing inefficiency(목표 정보 처리 비효율) 어려움 가능성 - et_aoi_dwell_time_mean ↑"
+          },
+          "interpretation": {
+            "higher_value": {
+              "summary": "target processing inefficiency(목표 정보 처리 비효율) 가능성",
+              "cognitive_meaning": "target processing inefficiency(목표 정보 처리 비효율) 가능성",
+              "clinical_note": "간섭통제 저하와 관련된 양상으로 해석 가능"
+            },
+            "typical_value": {
+              "summary": "기준 범위",
+              "cognitive_meaning": "Flanker에서 et_aoi_dwell_time_mean이 기준 범위에 해당하는 경우, target processing inefficiency(목표 정보 처리 비효율) 소견은 두드러지지 않는 것으로 볼 수 있습니다."
+            },
+            "lower_value": {
+              "summary": "target processing inefficiency(목표 정보 처리 비효율)을 시사하는 근거는 상대적으로 약함",
+              "cognitive_meaning": "target processing inefficiency(목표 정보 처리 비효율)을 시사하는 근거는 상대적으로 약함",
+              "caution": "낮은 값만으로 간섭통제이 우수하다고 단정하지 않음"
+            }
+          },
+          "evidence": {
+            "literature_insight": "Flanker 과제의 원형 논문으로, 목표 자극 주변의 noise/flanker가 target identification 및 반응에 간섭을 일으킬 수 있음을 보여줌. / Flanker와 같은 conflict task에서 갈등 모니터링과 인지 통제가 수행 조절에 관여한다는 이론적 근거를 제공함. / 시각 탐색 중 target/distractor 관련 fixation과 eye movement 양상이 목표-비목표 정보 처리 해석에 사용될 수 있음을 보여줌.",
+            "references": [
+              {
+                "id": "eriksen_1974",
+                "citation": "Eriksen, B. A., & Eriksen, C. W. (1974). Effects of noise letters upon the identification of a target letter in a nonsearch task. Perception & Psychophysics, 16(1), 143-149.",
+                "url": "https://doi.org/10.3758/BF03203267",
+                "doi": "10.3758/BF03203267",
+                "evidence_note": "Flanker 과제의 원형 논문으로, 목표 자극 주변의 noise/flanker가 target identification 및 반응에 간섭을 일으킬 수 있음을 보여줌."
+              },
+              {
+                "id": "botvinick_2001",
+                "citation": "Botvinick, M. M., Braver, T. S., Barch, D. M., Carter, C. S., & Cohen, J. D. (2001). Conflict monitoring and cognitive control. Psychological Review, 108(3), 624-652.",
+                "url": "https://doi.org/10.1037/0033-295X.108.3.624",
+                "doi": "10.1037/0033-295X.108.3.624",
+                "evidence_note": "Flanker와 같은 conflict task에서 갈등 모니터링과 인지 통제가 수행 조절에 관여한다는 이론적 근거를 제공함."
+              },
+              {
+                "id": "zelinsky_1997",
+                "citation": "Zelinsky, G. J., & Sheinberg, D. L. (1997). Eye movements during parallel-serial visual search. Journal of Experimental Psychology: Human Perception and Performance, 23(1), 244-262.",
+                "url": "https://doi.org/10.1037/0096-1523.23.1.244",
+                "doi": "10.1037/0096-1523.23.1.244",
+                "evidence_note": "시각 탐색 중 target/distractor 관련 fixation과 eye movement 양상이 목표-비목표 정보 처리 해석에 사용될 수 있음을 보여줌."
+              }
+            ]
+          },
+          "report_template": {
+            "high_value_phrase": "Flanker에서 et_aoi_dwell_time_mean이 높게 나타난 경우, target processing inefficiency(목표 정보 처리 비효율)가 있었을 가능성을 시사합니다. 이는 간섭통제 저하와 관련된 근거로 해석할 수 있습니다.",
+            "typical_value_phrase": "Flanker에서 et_aoi_dwell_time_mean이 기준 범위에 해당하는 경우, target processing inefficiency(목표 정보 처리 비효율) 소견은 두드러지지 않는 것으로 볼 수 있습니다.",
+            "low_value_phrase": "Flanker에서 et_aoi_dwell_time_mean이 낮게 나타난 경우, target processing inefficiency(목표 정보 처리 비효율)을 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 간섭통제가 우수하다고 단정하지 않습니다."
+          },
+          "clinical_bridge": {
+            "criterion": "DSM-5 ADHD Criterion A1",
+            "criterion_domain": "부주의 증상군",
+            "bridge_type": "auxiliary_observation_not_diagnostic",
+            "related_items": [
+              "A1-h 외부 자극에 쉽게 산만해짐"
+            ]
+          },
+          "evidence_insight": "Flanker 과제의 원형 논문으로, 목표 자극 주변의 noise/flanker가 target identification 및 반응에 간섭을 일으킬 수 있음을 보여줌. / Flanker와 같은 conflict task에서 갈등 모니터링과 인지 통제가 수행 조절에 관여한다는 이론적 근거를 제공함. / 시각 탐색 중 target/distractor 관련 fixation과 eye movement 양상이 목표-비목표 정보 처리 해석에 사용될 수 있음을 보여줌.",
+          "inverse_interpretation_policy": "Do not invert this PI into a positive clinical conclusion without convergent task-performance evidence.",
+          "directional_report_rules": {
+            "high": {
+              "report_hint": "Flanker에서 et_aoi_dwell_time_mean이 높게 나타난 경우, target processing inefficiency(목표 정보 처리 비효율)가 있었을 가능성을 시사합니다. 이는 간섭통제 저하와 관련된 근거로 해석할 수 있습니다.",
+              "aggregate_hint": "target processing inefficiency(목표 정보 처리 비효율) 관련 소견은 간섭통제 관련 근거가 될 수 있다."
+            },
+            "typical": {
+              "report_hint": "Flanker에서 et_aoi_dwell_time_mean이 기준 범위에 해당하는 경우, target processing inefficiency(목표 정보 처리 비효율) 소견은 두드러지지 않는 것으로 볼 수 있습니다.",
+              "aggregate_hint": "기준 범위 소견은 어려움의 직접 근거로 사용하지 않는다."
+            },
+            "low": {
+              "report_hint": "Flanker에서 et_aoi_dwell_time_mean이 낮게 나타난 경우, target processing inefficiency(목표 정보 처리 비효율)을 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 간섭통제가 우수하다고 단정하지 않습니다.",
+              "aggregate_hint": "낮은 값만으로 간섭통제이 우수하다고 단정하지 않는다."
+            }
+          },
+          "draft_edge_assignment": {
+            "primitive_indicator": "et_aoi_dwell_time_mean",
+            "task": "Flanker",
+            "insight": "target processing inefficiency(목표 정보 처리 비효율) 어려움 가능성 ↑ - et_aoi_dwell_time_mean ↑",
+            "source": "3R SLLM dataset feature-direction specification",
+            "status": "structured_cognitive_mapping_v2"
+          },
+          "task_meaning": "target processing inefficiency(목표 정보 처리 비효율): 목표 정보를 확인하고 처리하는 과정에서 상대적으로 더 많은 시간이 필요한 양상",
+          "kg_grade": "B-literature-linked-v2"
+        }
+      },
+      "evidence": [
+        {
+          "id": "eriksen_1974",
+          "citation": "Eriksen, B. A., & Eriksen, C. W. (1974). Effects of noise letters upon the identification of a target letter in a nonsearch task. Perception & Psychophysics, 16(1), 143-149.",
+          "url": "https://doi.org/10.3758/BF03203267",
+          "doi": "10.3758/BF03203267",
+          "evidence_note": "Flanker 과제의 원형 논문으로, 목표 자극 주변의 noise/flanker가 target identification 및 반응에 간섭을 일으킬 수 있음을 보여줌."
+        },
+        {
+          "id": "botvinick_2001",
+          "citation": "Botvinick, M. M., Braver, T. S., Barch, D. M., Carter, C. S., & Cohen, J. D. (2001). Conflict monitoring and cognitive control. Psychological Review, 108(3), 624-652.",
+          "url": "https://doi.org/10.1037/0033-295X.108.3.624",
+          "doi": "10.1037/0033-295X.108.3.624",
+          "evidence_note": "Flanker와 같은 conflict task에서 갈등 모니터링과 인지 통제가 수행 조절에 관여한다는 이론적 근거를 제공함."
+        },
+        {
+          "id": "zelinsky_1997",
+          "citation": "Zelinsky, G. J., & Sheinberg, D. L. (1997). Eye movements during parallel-serial visual search. Journal of Experimental Psychology: Human Perception and Performance, 23(1), 244-262.",
+          "url": "https://doi.org/10.1037/0096-1523.23.1.244",
+          "doi": "10.1037/0096-1523.23.1.244",
+          "evidence_note": "시각 탐색 중 target/distractor 관련 fixation과 eye movement 양상이 목표-비목표 정보 처리 해석에 사용될 수 있음을 보여줌."
+        }
+      ],
+      "report_constraints": [
+        "Use as an auxiliary observation only.",
+        "Do not use this primitive indicator alone to diagnose ADHD or satisfy DSM-5 criteria.",
+        "Interpret together with task accuracy, reaction time, error counts, and task/display context when available."
+      ],
+      "evidence_insight": "Flanker 과제의 원형 논문으로, 목표 자극 주변의 noise/flanker가 target identification 및 반응에 간섭을 일으킬 수 있음을 보여줌. / Flanker와 같은 conflict task에서 갈등 모니터링과 인지 통제가 수행 조절에 관여한다는 이론적 근거를 제공함. / 시각 탐색 중 target/distractor 관련 fixation과 eye movement 양상이 목표-비목표 정보 처리 해석에 사용될 수 있음을 보여줌.",
+      "references": {
+        "eriksen_1974": {
+          "id": "eriksen_1974",
+          "citation": "Eriksen, B. A., & Eriksen, C. W. (1974). Effects of noise letters upon the identification of a target letter in a nonsearch task. Perception & Psychophysics, 16(1), 143-149.",
+          "url": "https://doi.org/10.3758/BF03203267",
+          "doi": "10.3758/BF03203267",
+          "evidence_note": "Flanker 과제의 원형 논문으로, 목표 자극 주변의 noise/flanker가 target identification 및 반응에 간섭을 일으킬 수 있음을 보여줌."
+        },
+        "botvinick_2001": {
+          "id": "botvinick_2001",
+          "citation": "Botvinick, M. M., Braver, T. S., Barch, D. M., Carter, C. S., & Cohen, J. D. (2001). Conflict monitoring and cognitive control. Psychological Review, 108(3), 624-652.",
+          "url": "https://doi.org/10.1037/0033-295X.108.3.624",
+          "doi": "10.1037/0033-295X.108.3.624",
+          "evidence_note": "Flanker와 같은 conflict task에서 갈등 모니터링과 인지 통제가 수행 조절에 관여한다는 이론적 근거를 제공함."
+        },
+        "zelinsky_1997": {
+          "id": "zelinsky_1997",
+          "citation": "Zelinsky, G. J., & Sheinberg, D. L. (1997). Eye movements during parallel-serial visual search. Journal of Experimental Psychology: Human Perception and Performance, 23(1), 244-262.",
+          "url": "https://doi.org/10.1037/0096-1523.23.1.244",
+          "doi": "10.1037/0096-1523.23.1.244",
+          "evidence_note": "시각 탐색 중 target/distractor 관련 fixation과 eye movement 양상이 목표-비목표 정보 처리 해석에 사용될 수 있음을 보여줌."
+        }
+      }
+    },
+    "et_saccade_rate_mean": {
+      "display_name": "et_saccade_rate_mean",
+      "definition": "단위 시간당 saccade 발생 빈도의 평균",
+      "unit": "회/s",
+      "value_type": "continuous",
+      "node": {
+        "name": "et_saccade_rate_mean",
+        "layer": "Primitive Indicator Layer",
+        "definition": "단위 시간당 saccade 발생 빈도의 평균",
+        "unit": "회/s",
+        "measurement": {
+          "modality": "eye_tracking"
+        }
+      },
+      "measurement_metadata": {
+        "definition": "단위 시간당 saccade 발생 빈도의 평균",
+        "unit": "회/s",
+        "signal": "et_saccade_rate_mean",
+        "aggregation": "mean",
+        "time_window": "GNG 수행 중"
+      },
+      "higher_value_general_meaning": "intrusive saccade(불필요한 시선 이동) 증가 가능성",
+      "lower_value_general_meaning": "intrusive saccade(불필요한 시선 이동) 증가를 시사하는 근거는 상대적으로 약함",
+      "task_interpretations": {
+        "GNG": {
+          "direction": "high",
+          "meaning": "intrusive saccade(불필요한 시선 이동): 중앙 자극에 시선을 유지해야 하는 상황에서 과제와 무관하게 발생하는 불필요한 시선 이동",
+          "behavior_proxy": "반응억제",
+          "report_sentence": "GNG에서 et_saccade_rate_mean이 높게 나타난 경우, intrusive saccade(불필요한 시선 이동)가 증가했을 가능성을 시사합니다. 이는 반응억제 저하와 관련된 근거로 해석할 수 있습니다.",
+          "polarity": "difficulty_when_high",
+          "cognitive_mapping": {
+            "domain": "response inhibition",
+            "process": "intrusive saccade",
+            "process_ko": "불필요한 시선 이동",
+            "process_definition": "중앙 자극에 시선을 유지해야 하는 상황에서 과제와 무관하게 발생하는 불필요한 시선 이동"
+          },
+          "direction_rule": {
+            "difficulty_direction": "higher_value",
+            "insight": "intrusive saccade(불필요한 시선 이동) 어려움 가능성 ↑ - et_saccade_rate_mean ↑",
+            "clinical_path": "반응억제 ↓ - intrusive saccade(불필요한 시선 이동) 어려움 가능성 - et_saccade_rate_mean ↑"
+          },
+          "interpretation": {
+            "higher_value": {
+              "summary": "intrusive saccade(불필요한 시선 이동) 증가 가능성",
+              "cognitive_meaning": "intrusive saccade(불필요한 시선 이동) 증가 가능성",
+              "clinical_note": "반응억제 저하와 관련된 양상으로 해석 가능"
+            },
+            "typical_value": {
+              "summary": "기준 범위",
+              "cognitive_meaning": "GNG에서 et_saccade_rate_mean이 기준 범위에 해당하는 경우, intrusive saccade(불필요한 시선 이동) 증가 소견은 두드러지지 않는 것으로 볼 수 있습니다."
+            },
+            "lower_value": {
+              "summary": "intrusive saccade(불필요한 시선 이동) 증가를 시사하는 근거는 상대적으로 약함",
+              "cognitive_meaning": "intrusive saccade(불필요한 시선 이동) 증가를 시사하는 근거는 상대적으로 약함",
+              "caution": "낮은 값만으로 반응억제이 우수하다고 단정하지 않음"
+            }
+          },
+          "evidence": {
+            "literature_insight": "ADHD에서 oculomotor response preparation 및 inhibition 결함을 보고하여, saccade 및 fixation 관련 지표를 반응억제 해석에 연결하는 근거로 사용할 수 있음. / ADHD 아동에서 saccade/antisaccade 등 oculomotor control 이상을 보고하여, 불필요한 시선 이동과 억제 조절 해석의 근거로 사용할 수 있음. / Go/No-Go 과제가 반응 억제 및 전전두엽 기반 inhibitory control을 평가하는 과제로 사용될 수 있음을 보여줌.",
+            "references": [
+              {
+                "id": "mahone_2009",
+                "citation": "Mahone, E. M., Mostofsky, S. H., Lasker, A. G., Zee, D., & Denckla, M. B. (2009). Oculomotor anomalies in attention-deficit/hyperactivity disorder: evidence for deficits in response preparation and inhibition. Journal of the American Academy of Child & Adolescent Psychiatry, 48(7), 749-756.",
+                "url": "https://doi.org/10.1097/CHI.0b013e3181a565f1",
+                "doi": "10.1097/CHI.0b013e3181a565f1",
+                "pubmed": "https://pubmed.ncbi.nlm.nih.gov/19465877/",
+                "evidence_note": "ADHD에서 oculomotor response preparation 및 inhibition 결함을 보고하여, saccade 및 fixation 관련 지표를 반응억제 해석에 연결하는 근거로 사용할 수 있음."
+              },
+              {
+                "id": "mostofsky_2001",
+                "citation": "Mostofsky, S. H., Lasker, A. G., Cutting, L. E., Denckla, M. B., & Zee, D. S. (2001). Oculomotor abnormalities in attention deficit hyperactivity disorder: a preliminary study. Neurology, 57(3), 423-430.",
+                "url": "https://doi.org/10.1212/WNL.57.3.423",
+                "doi": "10.1212/WNL.57.3.423",
+                "pubmed": "https://pubmed.ncbi.nlm.nih.gov/11502907/",
+                "evidence_note": "ADHD 아동에서 saccade/antisaccade 등 oculomotor control 이상을 보고하여, 불필요한 시선 이동과 억제 조절 해석의 근거로 사용할 수 있음."
+              },
+              {
+                "id": "casey_1997",
+                "citation": "Casey, B. J., Trainor, R. J., Orendi, J. L., Schubert, A. B., Nystrom, L. E., Giedd, J. N., Castellanos, F. X., Haxby, J. V., Noll, D. C., Cohen, J. D., Forman, S. D., Dahl, R. E., & Rapoport, J. L. (1997). A developmental functional MRI study of prefrontal activation during performance of a go-no-go task. Journal of Cognitive Neuroscience, 9(6), 835-847.",
+                "url": "https://doi.org/10.1162/jocn.1997.9.6.835",
+                "doi": "10.1162/jocn.1997.9.6.835",
+                "evidence_note": "Go/No-Go 과제가 반응 억제 및 전전두엽 기반 inhibitory control을 평가하는 과제로 사용될 수 있음을 보여줌."
+              }
+            ]
+          },
+          "report_template": {
+            "high_value_phrase": "GNG에서 et_saccade_rate_mean이 높게 나타난 경우, intrusive saccade(불필요한 시선 이동)가 증가했을 가능성을 시사합니다. 이는 반응억제 저하와 관련된 근거로 해석할 수 있습니다.",
+            "typical_value_phrase": "GNG에서 et_saccade_rate_mean이 기준 범위에 해당하는 경우, intrusive saccade(불필요한 시선 이동) 증가 소견은 두드러지지 않는 것으로 볼 수 있습니다.",
+            "low_value_phrase": "GNG에서 et_saccade_rate_mean이 낮게 나타난 경우, intrusive saccade(불필요한 시선 이동) 증가를 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 반응억제가 우수하다고 단정하지 않습니다."
+          },
+          "clinical_bridge": {
+            "criterion": "DSM-5 ADHD Criterion A2",
+            "criterion_domain": "과잉행동-충동성 증상군",
+            "bridge_type": "auxiliary_observation_not_diagnostic",
+            "related_items": [
+              "A2-g 질문이 끝나기 전에 성급하게 대답함",
+              "A2-h 차례를 기다리기 어려움",
+              "A2-i 다른 사람을 방해하거나 끼어듦"
+            ]
+          },
+          "evidence_insight": "ADHD에서 oculomotor response preparation 및 inhibition 결함을 보고하여, saccade 및 fixation 관련 지표를 반응억제 해석에 연결하는 근거로 사용할 수 있음. / ADHD 아동에서 saccade/antisaccade 등 oculomotor control 이상을 보고하여, 불필요한 시선 이동과 억제 조절 해석의 근거로 사용할 수 있음. / Go/No-Go 과제가 반응 억제 및 전전두엽 기반 inhibitory control을 평가하는 과제로 사용될 수 있음을 보여줌.",
+          "inverse_interpretation_policy": "Do not invert this PI into a positive clinical conclusion without convergent task-performance evidence.",
+          "directional_report_rules": {
+            "high": {
+              "report_hint": "GNG에서 et_saccade_rate_mean이 높게 나타난 경우, intrusive saccade(불필요한 시선 이동)가 증가했을 가능성을 시사합니다. 이는 반응억제 저하와 관련된 근거로 해석할 수 있습니다.",
+              "aggregate_hint": "intrusive saccade(불필요한 시선 이동) 관련 소견은 반응억제 관련 근거가 될 수 있다."
+            },
+            "typical": {
+              "report_hint": "GNG에서 et_saccade_rate_mean이 기준 범위에 해당하는 경우, intrusive saccade(불필요한 시선 이동) 증가 소견은 두드러지지 않는 것으로 볼 수 있습니다.",
+              "aggregate_hint": "기준 범위 소견은 어려움의 직접 근거로 사용하지 않는다."
+            },
+            "low": {
+              "report_hint": "GNG에서 et_saccade_rate_mean이 낮게 나타난 경우, intrusive saccade(불필요한 시선 이동) 증가를 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 반응억제가 우수하다고 단정하지 않습니다.",
+              "aggregate_hint": "낮은 값만으로 반응억제이 우수하다고 단정하지 않는다."
+            }
+          },
+          "draft_edge_assignment": {
+            "primitive_indicator": "et_saccade_rate_mean",
+            "task": "GNG",
+            "insight": "intrusive saccade(불필요한 시선 이동) 어려움 가능성 ↑ - et_saccade_rate_mean ↑",
+            "source": "3R SLLM dataset feature-direction specification",
+            "status": "structured_cognitive_mapping_v2"
+          },
+          "task_meaning": "intrusive saccade(불필요한 시선 이동): 중앙 자극에 시선을 유지해야 하는 상황에서 과제와 무관하게 발생하는 불필요한 시선 이동",
+          "kg_grade": "B-literature-linked-v2"
+        }
+      },
+      "evidence": [
+        {
+          "id": "mahone_2009",
+          "citation": "Mahone, E. M., Mostofsky, S. H., Lasker, A. G., Zee, D., & Denckla, M. B. (2009). Oculomotor anomalies in attention-deficit/hyperactivity disorder: evidence for deficits in response preparation and inhibition. Journal of the American Academy of Child & Adolescent Psychiatry, 48(7), 749-756.",
+          "url": "https://doi.org/10.1097/CHI.0b013e3181a565f1",
+          "doi": "10.1097/CHI.0b013e3181a565f1",
+          "pubmed": "https://pubmed.ncbi.nlm.nih.gov/19465877/",
+          "evidence_note": "ADHD에서 oculomotor response preparation 및 inhibition 결함을 보고하여, saccade 및 fixation 관련 지표를 반응억제 해석에 연결하는 근거로 사용할 수 있음."
+        },
+        {
+          "id": "mostofsky_2001",
+          "citation": "Mostofsky, S. H., Lasker, A. G., Cutting, L. E., Denckla, M. B., & Zee, D. S. (2001). Oculomotor abnormalities in attention deficit hyperactivity disorder: a preliminary study. Neurology, 57(3), 423-430.",
+          "url": "https://doi.org/10.1212/WNL.57.3.423",
+          "doi": "10.1212/WNL.57.3.423",
+          "pubmed": "https://pubmed.ncbi.nlm.nih.gov/11502907/",
+          "evidence_note": "ADHD 아동에서 saccade/antisaccade 등 oculomotor control 이상을 보고하여, 불필요한 시선 이동과 억제 조절 해석의 근거로 사용할 수 있음."
+        },
+        {
+          "id": "casey_1997",
+          "citation": "Casey, B. J., Trainor, R. J., Orendi, J. L., Schubert, A. B., Nystrom, L. E., Giedd, J. N., Castellanos, F. X., Haxby, J. V., Noll, D. C., Cohen, J. D., Forman, S. D., Dahl, R. E., & Rapoport, J. L. (1997). A developmental functional MRI study of prefrontal activation during performance of a go-no-go task. Journal of Cognitive Neuroscience, 9(6), 835-847.",
+          "url": "https://doi.org/10.1162/jocn.1997.9.6.835",
+          "doi": "10.1162/jocn.1997.9.6.835",
+          "evidence_note": "Go/No-Go 과제가 반응 억제 및 전전두엽 기반 inhibitory control을 평가하는 과제로 사용될 수 있음을 보여줌."
+        }
+      ],
+      "report_constraints": [
+        "Use as an auxiliary observation only.",
+        "Do not use this primitive indicator alone to diagnose ADHD or satisfy DSM-5 criteria.",
+        "Interpret together with task accuracy, reaction time, error counts, and task/display context when available."
+      ],
+      "evidence_insight": "ADHD에서 oculomotor response preparation 및 inhibition 결함을 보고하여, saccade 및 fixation 관련 지표를 반응억제 해석에 연결하는 근거로 사용할 수 있음. / ADHD 아동에서 saccade/antisaccade 등 oculomotor control 이상을 보고하여, 불필요한 시선 이동과 억제 조절 해석의 근거로 사용할 수 있음. / Go/No-Go 과제가 반응 억제 및 전전두엽 기반 inhibitory control을 평가하는 과제로 사용될 수 있음을 보여줌.",
+      "references": {
+        "mahone_2009": {
+          "id": "mahone_2009",
+          "citation": "Mahone, E. M., Mostofsky, S. H., Lasker, A. G., Zee, D., & Denckla, M. B. (2009). Oculomotor anomalies in attention-deficit/hyperactivity disorder: evidence for deficits in response preparation and inhibition. Journal of the American Academy of Child & Adolescent Psychiatry, 48(7), 749-756.",
+          "url": "https://doi.org/10.1097/CHI.0b013e3181a565f1",
+          "doi": "10.1097/CHI.0b013e3181a565f1",
+          "pubmed": "https://pubmed.ncbi.nlm.nih.gov/19465877/",
+          "evidence_note": "ADHD에서 oculomotor response preparation 및 inhibition 결함을 보고하여, saccade 및 fixation 관련 지표를 반응억제 해석에 연결하는 근거로 사용할 수 있음."
+        },
+        "mostofsky_2001": {
+          "id": "mostofsky_2001",
+          "citation": "Mostofsky, S. H., Lasker, A. G., Cutting, L. E., Denckla, M. B., & Zee, D. S. (2001). Oculomotor abnormalities in attention deficit hyperactivity disorder: a preliminary study. Neurology, 57(3), 423-430.",
+          "url": "https://doi.org/10.1212/WNL.57.3.423",
+          "doi": "10.1212/WNL.57.3.423",
+          "pubmed": "https://pubmed.ncbi.nlm.nih.gov/11502907/",
+          "evidence_note": "ADHD 아동에서 saccade/antisaccade 등 oculomotor control 이상을 보고하여, 불필요한 시선 이동과 억제 조절 해석의 근거로 사용할 수 있음."
+        },
+        "casey_1997": {
+          "id": "casey_1997",
+          "citation": "Casey, B. J., Trainor, R. J., Orendi, J. L., Schubert, A. B., Nystrom, L. E., Giedd, J. N., Castellanos, F. X., Haxby, J. V., Noll, D. C., Cohen, J. D., Forman, S. D., Dahl, R. E., & Rapoport, J. L. (1997). A developmental functional MRI study of prefrontal activation during performance of a go-no-go task. Journal of Cognitive Neuroscience, 9(6), 835-847.",
+          "url": "https://doi.org/10.1162/jocn.1997.9.6.835",
+          "doi": "10.1162/jocn.1997.9.6.835",
+          "evidence_note": "Go/No-Go 과제가 반응 억제 및 전전두엽 기반 inhibitory control을 평가하는 과제로 사용될 수 있음을 보여줌."
+        }
+      }
+    },
+    "et_saccade_direction_mean": {
+      "display_name": "et_saccade_direction_mean",
+      "definition": "saccade 방향 각도의 평균",
+      "unit": "°",
+      "value_type": "continuous",
+      "node": {
+        "name": "et_saccade_direction_mean",
+        "layer": "Primitive Indicator Layer",
+        "definition": "saccade 방향 각도의 평균",
+        "unit": "°",
+        "measurement": {
+          "modality": "eye_tracking"
+        }
+      },
+      "measurement_metadata": {
+        "definition": "saccade 방향 각도의 평균",
+        "unit": "°",
+        "signal": "et_saccade_direction_mean",
+        "aggregation": "mean",
+        "time_window": "GNG 수행 중"
+      },
+      "higher_value_general_meaning": "off-center gaze deviation(중앙 기준 시선 이탈) 증가 가능성",
+      "lower_value_general_meaning": "off-center gaze deviation(중앙 기준 시선 이탈) 증가를 시사하는 근거는 상대적으로 약함",
+      "task_interpretations": {
+        "GNG": {
+          "direction": "high",
+          "meaning": "off-center gaze deviation(중앙 기준 시선 이탈): 중앙 자극 주변에 시선을 안정적으로 유지하지 못하고 과제와 무관한 방향으로 이탈하는 양상",
+          "behavior_proxy": "반응억제",
+          "report_sentence": "GNG에서 et_saccade_direction_mean이 높게 나타난 경우, off-center gaze deviation(중앙 기준 시선 이탈)이 증가했을 가능성을 시사합니다. 이는 반응억제 저하와 관련된 근거로 해석할 수 있습니다.",
+          "polarity": "difficulty_when_high",
+          "cognitive_mapping": {
+            "domain": "response inhibition",
+            "process": "off-center gaze deviation",
+            "process_ko": "중앙 기준 시선 이탈",
+            "process_definition": "중앙 자극 주변에 시선을 안정적으로 유지하지 못하고 과제와 무관한 방향으로 이탈하는 양상"
+          },
+          "direction_rule": {
+            "difficulty_direction": "higher_value",
+            "insight": "off-center gaze deviation(중앙 기준 시선 이탈) 어려움 가능성 ↑ - et_saccade_direction_mean ↑",
+            "clinical_path": "반응억제 ↓ - off-center gaze deviation(중앙 기준 시선 이탈) 어려움 가능성 - et_saccade_direction_mean ↑"
+          },
+          "interpretation": {
+            "higher_value": {
+              "summary": "off-center gaze deviation(중앙 기준 시선 이탈) 증가 가능성",
+              "cognitive_meaning": "off-center gaze deviation(중앙 기준 시선 이탈) 증가 가능성",
+              "clinical_note": "반응억제 저하와 관련된 양상으로 해석 가능"
+            },
+            "typical_value": {
+              "summary": "기준 범위",
+              "cognitive_meaning": "GNG에서 et_saccade_direction_mean이 기준 범위에 해당하는 경우, off-center gaze deviation(중앙 기준 시선 이탈) 증가 소견은 두드러지지 않는 것으로 볼 수 있습니다."
+            },
+            "lower_value": {
+              "summary": "off-center gaze deviation(중앙 기준 시선 이탈) 증가를 시사하는 근거는 상대적으로 약함",
+              "cognitive_meaning": "off-center gaze deviation(중앙 기준 시선 이탈) 증가를 시사하는 근거는 상대적으로 약함",
+              "caution": "낮은 값만으로 반응억제이 우수하다고 단정하지 않음"
+            }
+          },
+          "evidence": {
+            "literature_insight": "ADHD에서 oculomotor response preparation 및 inhibition 결함을 보고하여, saccade 및 fixation 관련 지표를 반응억제 해석에 연결하는 근거로 사용할 수 있음. / ADHD 아동에서 saccade/antisaccade 등 oculomotor control 이상을 보고하여, 불필요한 시선 이동과 억제 조절 해석의 근거로 사용할 수 있음. / Go/No-Go 과제가 반응 억제 및 전전두엽 기반 inhibitory control을 평가하는 과제로 사용될 수 있음을 보여줌.",
+            "references": [
+              {
+                "id": "mahone_2009",
+                "citation": "Mahone, E. M., Mostofsky, S. H., Lasker, A. G., Zee, D., & Denckla, M. B. (2009). Oculomotor anomalies in attention-deficit/hyperactivity disorder: evidence for deficits in response preparation and inhibition. Journal of the American Academy of Child & Adolescent Psychiatry, 48(7), 749-756.",
+                "url": "https://doi.org/10.1097/CHI.0b013e3181a565f1",
+                "doi": "10.1097/CHI.0b013e3181a565f1",
+                "pubmed": "https://pubmed.ncbi.nlm.nih.gov/19465877/",
+                "evidence_note": "ADHD에서 oculomotor response preparation 및 inhibition 결함을 보고하여, saccade 및 fixation 관련 지표를 반응억제 해석에 연결하는 근거로 사용할 수 있음."
+              },
+              {
+                "id": "mostofsky_2001",
+                "citation": "Mostofsky, S. H., Lasker, A. G., Cutting, L. E., Denckla, M. B., & Zee, D. S. (2001). Oculomotor abnormalities in attention deficit hyperactivity disorder: a preliminary study. Neurology, 57(3), 423-430.",
+                "url": "https://doi.org/10.1212/WNL.57.3.423",
+                "doi": "10.1212/WNL.57.3.423",
+                "pubmed": "https://pubmed.ncbi.nlm.nih.gov/11502907/",
+                "evidence_note": "ADHD 아동에서 saccade/antisaccade 등 oculomotor control 이상을 보고하여, 불필요한 시선 이동과 억제 조절 해석의 근거로 사용할 수 있음."
+              },
+              {
+                "id": "casey_1997",
+                "citation": "Casey, B. J., Trainor, R. J., Orendi, J. L., Schubert, A. B., Nystrom, L. E., Giedd, J. N., Castellanos, F. X., Haxby, J. V., Noll, D. C., Cohen, J. D., Forman, S. D., Dahl, R. E., & Rapoport, J. L. (1997). A developmental functional MRI study of prefrontal activation during performance of a go-no-go task. Journal of Cognitive Neuroscience, 9(6), 835-847.",
+                "url": "https://doi.org/10.1162/jocn.1997.9.6.835",
+                "doi": "10.1162/jocn.1997.9.6.835",
+                "evidence_note": "Go/No-Go 과제가 반응 억제 및 전전두엽 기반 inhibitory control을 평가하는 과제로 사용될 수 있음을 보여줌."
+              }
+            ]
+          },
+          "report_template": {
+            "high_value_phrase": "GNG에서 et_saccade_direction_mean이 높게 나타난 경우, off-center gaze deviation(중앙 기준 시선 이탈)이 증가했을 가능성을 시사합니다. 이는 반응억제 저하와 관련된 근거로 해석할 수 있습니다.",
+            "typical_value_phrase": "GNG에서 et_saccade_direction_mean이 기준 범위에 해당하는 경우, off-center gaze deviation(중앙 기준 시선 이탈) 증가 소견은 두드러지지 않는 것으로 볼 수 있습니다.",
+            "low_value_phrase": "GNG에서 et_saccade_direction_mean이 낮게 나타난 경우, off-center gaze deviation(중앙 기준 시선 이탈) 증가를 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 반응억제가 우수하다고 단정하지 않습니다."
+          },
+          "clinical_bridge": {
+            "criterion": "DSM-5 ADHD Criterion A2",
+            "criterion_domain": "과잉행동-충동성 증상군",
+            "bridge_type": "auxiliary_observation_not_diagnostic",
+            "related_items": [
+              "A2-g 질문이 끝나기 전에 성급하게 대답함",
+              "A2-h 차례를 기다리기 어려움",
+              "A2-i 다른 사람을 방해하거나 끼어듦"
+            ]
+          },
+          "evidence_insight": "ADHD에서 oculomotor response preparation 및 inhibition 결함을 보고하여, saccade 및 fixation 관련 지표를 반응억제 해석에 연결하는 근거로 사용할 수 있음. / ADHD 아동에서 saccade/antisaccade 등 oculomotor control 이상을 보고하여, 불필요한 시선 이동과 억제 조절 해석의 근거로 사용할 수 있음. / Go/No-Go 과제가 반응 억제 및 전전두엽 기반 inhibitory control을 평가하는 과제로 사용될 수 있음을 보여줌.",
+          "inverse_interpretation_policy": "Do not invert this PI into a positive clinical conclusion without convergent task-performance evidence.",
+          "directional_report_rules": {
+            "high": {
+              "report_hint": "GNG에서 et_saccade_direction_mean이 높게 나타난 경우, off-center gaze deviation(중앙 기준 시선 이탈)이 증가했을 가능성을 시사합니다. 이는 반응억제 저하와 관련된 근거로 해석할 수 있습니다.",
+              "aggregate_hint": "off-center gaze deviation(중앙 기준 시선 이탈) 관련 소견은 반응억제 관련 근거가 될 수 있다."
+            },
+            "typical": {
+              "report_hint": "GNG에서 et_saccade_direction_mean이 기준 범위에 해당하는 경우, off-center gaze deviation(중앙 기준 시선 이탈) 증가 소견은 두드러지지 않는 것으로 볼 수 있습니다.",
+              "aggregate_hint": "기준 범위 소견은 어려움의 직접 근거로 사용하지 않는다."
+            },
+            "low": {
+              "report_hint": "GNG에서 et_saccade_direction_mean이 낮게 나타난 경우, off-center gaze deviation(중앙 기준 시선 이탈) 증가를 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 반응억제가 우수하다고 단정하지 않습니다.",
+              "aggregate_hint": "낮은 값만으로 반응억제이 우수하다고 단정하지 않는다."
+            }
+          },
+          "draft_edge_assignment": {
+            "primitive_indicator": "et_saccade_direction_mean",
+            "task": "GNG",
+            "insight": "off-center gaze deviation(중앙 기준 시선 이탈) 어려움 가능성 ↑ - et_saccade_direction_mean ↑",
+            "source": "3R SLLM dataset feature-direction specification",
+            "status": "structured_cognitive_mapping_v2"
+          },
+          "task_meaning": "off-center gaze deviation(중앙 기준 시선 이탈): 중앙 자극 주변에 시선을 안정적으로 유지하지 못하고 과제와 무관한 방향으로 이탈하는 양상",
+          "kg_grade": "B-literature-linked-v2"
+        }
+      },
+      "evidence": [
+        {
+          "id": "mahone_2009",
+          "citation": "Mahone, E. M., Mostofsky, S. H., Lasker, A. G., Zee, D., & Denckla, M. B. (2009). Oculomotor anomalies in attention-deficit/hyperactivity disorder: evidence for deficits in response preparation and inhibition. Journal of the American Academy of Child & Adolescent Psychiatry, 48(7), 749-756.",
+          "url": "https://doi.org/10.1097/CHI.0b013e3181a565f1",
+          "doi": "10.1097/CHI.0b013e3181a565f1",
+          "pubmed": "https://pubmed.ncbi.nlm.nih.gov/19465877/",
+          "evidence_note": "ADHD에서 oculomotor response preparation 및 inhibition 결함을 보고하여, saccade 및 fixation 관련 지표를 반응억제 해석에 연결하는 근거로 사용할 수 있음."
+        },
+        {
+          "id": "mostofsky_2001",
+          "citation": "Mostofsky, S. H., Lasker, A. G., Cutting, L. E., Denckla, M. B., & Zee, D. S. (2001). Oculomotor abnormalities in attention deficit hyperactivity disorder: a preliminary study. Neurology, 57(3), 423-430.",
+          "url": "https://doi.org/10.1212/WNL.57.3.423",
+          "doi": "10.1212/WNL.57.3.423",
+          "pubmed": "https://pubmed.ncbi.nlm.nih.gov/11502907/",
+          "evidence_note": "ADHD 아동에서 saccade/antisaccade 등 oculomotor control 이상을 보고하여, 불필요한 시선 이동과 억제 조절 해석의 근거로 사용할 수 있음."
+        },
+        {
+          "id": "casey_1997",
+          "citation": "Casey, B. J., Trainor, R. J., Orendi, J. L., Schubert, A. B., Nystrom, L. E., Giedd, J. N., Castellanos, F. X., Haxby, J. V., Noll, D. C., Cohen, J. D., Forman, S. D., Dahl, R. E., & Rapoport, J. L. (1997). A developmental functional MRI study of prefrontal activation during performance of a go-no-go task. Journal of Cognitive Neuroscience, 9(6), 835-847.",
+          "url": "https://doi.org/10.1162/jocn.1997.9.6.835",
+          "doi": "10.1162/jocn.1997.9.6.835",
+          "evidence_note": "Go/No-Go 과제가 반응 억제 및 전전두엽 기반 inhibitory control을 평가하는 과제로 사용될 수 있음을 보여줌."
+        }
+      ],
+      "report_constraints": [
+        "Use as an auxiliary observation only.",
+        "Do not use this primitive indicator alone to diagnose ADHD or satisfy DSM-5 criteria.",
+        "Interpret together with task accuracy, reaction time, error counts, and task/display context when available."
+      ],
+      "evidence_insight": "ADHD에서 oculomotor response preparation 및 inhibition 결함을 보고하여, saccade 및 fixation 관련 지표를 반응억제 해석에 연결하는 근거로 사용할 수 있음. / ADHD 아동에서 saccade/antisaccade 등 oculomotor control 이상을 보고하여, 불필요한 시선 이동과 억제 조절 해석의 근거로 사용할 수 있음. / Go/No-Go 과제가 반응 억제 및 전전두엽 기반 inhibitory control을 평가하는 과제로 사용될 수 있음을 보여줌.",
+      "references": {
+        "mahone_2009": {
+          "id": "mahone_2009",
+          "citation": "Mahone, E. M., Mostofsky, S. H., Lasker, A. G., Zee, D., & Denckla, M. B. (2009). Oculomotor anomalies in attention-deficit/hyperactivity disorder: evidence for deficits in response preparation and inhibition. Journal of the American Academy of Child & Adolescent Psychiatry, 48(7), 749-756.",
+          "url": "https://doi.org/10.1097/CHI.0b013e3181a565f1",
+          "doi": "10.1097/CHI.0b013e3181a565f1",
+          "pubmed": "https://pubmed.ncbi.nlm.nih.gov/19465877/",
+          "evidence_note": "ADHD에서 oculomotor response preparation 및 inhibition 결함을 보고하여, saccade 및 fixation 관련 지표를 반응억제 해석에 연결하는 근거로 사용할 수 있음."
+        },
+        "mostofsky_2001": {
+          "id": "mostofsky_2001",
+          "citation": "Mostofsky, S. H., Lasker, A. G., Cutting, L. E., Denckla, M. B., & Zee, D. S. (2001). Oculomotor abnormalities in attention deficit hyperactivity disorder: a preliminary study. Neurology, 57(3), 423-430.",
+          "url": "https://doi.org/10.1212/WNL.57.3.423",
+          "doi": "10.1212/WNL.57.3.423",
+          "pubmed": "https://pubmed.ncbi.nlm.nih.gov/11502907/",
+          "evidence_note": "ADHD 아동에서 saccade/antisaccade 등 oculomotor control 이상을 보고하여, 불필요한 시선 이동과 억제 조절 해석의 근거로 사용할 수 있음."
+        },
+        "casey_1997": {
+          "id": "casey_1997",
+          "citation": "Casey, B. J., Trainor, R. J., Orendi, J. L., Schubert, A. B., Nystrom, L. E., Giedd, J. N., Castellanos, F. X., Haxby, J. V., Noll, D. C., Cohen, J. D., Forman, S. D., Dahl, R. E., & Rapoport, J. L. (1997). A developmental functional MRI study of prefrontal activation during performance of a go-no-go task. Journal of Cognitive Neuroscience, 9(6), 835-847.",
+          "url": "https://doi.org/10.1162/jocn.1997.9.6.835",
+          "doi": "10.1162/jocn.1997.9.6.835",
+          "evidence_note": "Go/No-Go 과제가 반응 억제 및 전전두엽 기반 inhibitory control을 평가하는 과제로 사용될 수 있음을 보여줌."
+        }
+      }
+    },
+    "et_gaze_offset_to_screen_center_mean": {
+      "display_name": "et_gaze_offset_to_screen_center_mean",
+      "definition": "시선 위치와 화면 중앙 사이 거리의 평균",
+      "unit": "px",
+      "value_type": "continuous",
+      "node": {
+        "name": "et_gaze_offset_to_screen_center_mean",
+        "layer": "Primitive Indicator Layer",
+        "definition": "시선 위치와 화면 중앙 사이 거리의 평균",
+        "unit": "px",
+        "measurement": {
+          "modality": "eye_tracking"
+        }
+      },
+      "measurement_metadata": {
+        "definition": "시선 위치와 화면 중앙 사이 거리의 평균",
+        "unit": "px",
+        "signal": "et_gaze_offset_to_screen_center_mean",
+        "aggregation": "mean",
+        "time_window": "GNG 수행 중"
+      },
+      "higher_value_general_meaning": "fixation maintenance(중앙 응시 유지) 저하 가능성",
+      "lower_value_general_meaning": "fixation maintenance(중앙 응시 유지) 저하를 시사하는 근거는 상대적으로 약함",
+      "task_interpretations": {
+        "GNG": {
+          "direction": "high",
+          "meaning": "fixation maintenance(중앙 응시 유지): 중앙에 제시되는 자극을 안정적으로 응시하며 시선을 유지하는 과정",
+          "behavior_proxy": "반응억제",
+          "report_sentence": "GNG에서 et_gaze_offset_to_screen_center_mean이 높게 나타난 경우, fixation maintenance(중앙 응시 유지)가 저하되었을 가능성을 시사합니다. 이는 반응억제 저하와 관련된 근거로 해석할 수 있습니다.",
+          "polarity": "difficulty_when_high",
+          "cognitive_mapping": {
+            "domain": "response inhibition",
+            "process": "fixation maintenance",
+            "process_ko": "중앙 응시 유지",
+            "process_definition": "중앙에 제시되는 자극을 안정적으로 응시하며 시선을 유지하는 과정"
+          },
+          "direction_rule": {
+            "difficulty_direction": "higher_value",
+            "insight": "fixation maintenance(중앙 응시 유지) 어려움 가능성 ↑ - et_gaze_offset_to_screen_center_mean ↑",
+            "clinical_path": "반응억제 ↓ - fixation maintenance(중앙 응시 유지) 어려움 가능성 - et_gaze_offset_to_screen_center_mean ↑"
+          },
+          "interpretation": {
+            "higher_value": {
+              "summary": "fixation maintenance(중앙 응시 유지) 저하 가능성",
+              "cognitive_meaning": "fixation maintenance(중앙 응시 유지) 저하 가능성",
+              "clinical_note": "반응억제 저하와 관련된 양상으로 해석 가능"
+            },
+            "typical_value": {
+              "summary": "기준 범위",
+              "cognitive_meaning": "GNG에서 et_gaze_offset_to_screen_center_mean이 기준 범위에 해당하는 경우, fixation maintenance(중앙 응시 유지) 저하 소견은 두드러지지 않는 것으로 볼 수 있습니다."
+            },
+            "lower_value": {
+              "summary": "fixation maintenance(중앙 응시 유지) 저하를 시사하는 근거는 상대적으로 약함",
+              "cognitive_meaning": "fixation maintenance(중앙 응시 유지) 저하를 시사하는 근거는 상대적으로 약함",
+              "caution": "낮은 값만으로 반응억제이 우수하다고 단정하지 않음"
+            }
+          },
+          "evidence": {
+            "literature_insight": "ADHD에서 oculomotor response preparation 및 inhibition 결함을 보고하여, saccade 및 fixation 관련 지표를 반응억제 해석에 연결하는 근거로 사용할 수 있음. / ADHD 아동에서 saccade/antisaccade 등 oculomotor control 이상을 보고하여, 불필요한 시선 이동과 억제 조절 해석의 근거로 사용할 수 있음. / Go/No-Go 과제가 반응 억제 및 전전두엽 기반 inhibitory control을 평가하는 과제로 사용될 수 있음을 보여줌.",
+            "references": [
+              {
+                "id": "mahone_2009",
+                "citation": "Mahone, E. M., Mostofsky, S. H., Lasker, A. G., Zee, D., & Denckla, M. B. (2009). Oculomotor anomalies in attention-deficit/hyperactivity disorder: evidence for deficits in response preparation and inhibition. Journal of the American Academy of Child & Adolescent Psychiatry, 48(7), 749-756.",
+                "url": "https://doi.org/10.1097/CHI.0b013e3181a565f1",
+                "doi": "10.1097/CHI.0b013e3181a565f1",
+                "pubmed": "https://pubmed.ncbi.nlm.nih.gov/19465877/",
+                "evidence_note": "ADHD에서 oculomotor response preparation 및 inhibition 결함을 보고하여, saccade 및 fixation 관련 지표를 반응억제 해석에 연결하는 근거로 사용할 수 있음."
+              },
+              {
+                "id": "mostofsky_2001",
+                "citation": "Mostofsky, S. H., Lasker, A. G., Cutting, L. E., Denckla, M. B., & Zee, D. S. (2001). Oculomotor abnormalities in attention deficit hyperactivity disorder: a preliminary study. Neurology, 57(3), 423-430.",
+                "url": "https://doi.org/10.1212/WNL.57.3.423",
+                "doi": "10.1212/WNL.57.3.423",
+                "pubmed": "https://pubmed.ncbi.nlm.nih.gov/11502907/",
+                "evidence_note": "ADHD 아동에서 saccade/antisaccade 등 oculomotor control 이상을 보고하여, 불필요한 시선 이동과 억제 조절 해석의 근거로 사용할 수 있음."
+              },
+              {
+                "id": "casey_1997",
+                "citation": "Casey, B. J., Trainor, R. J., Orendi, J. L., Schubert, A. B., Nystrom, L. E., Giedd, J. N., Castellanos, F. X., Haxby, J. V., Noll, D. C., Cohen, J. D., Forman, S. D., Dahl, R. E., & Rapoport, J. L. (1997). A developmental functional MRI study of prefrontal activation during performance of a go-no-go task. Journal of Cognitive Neuroscience, 9(6), 835-847.",
+                "url": "https://doi.org/10.1162/jocn.1997.9.6.835",
+                "doi": "10.1162/jocn.1997.9.6.835",
+                "evidence_note": "Go/No-Go 과제가 반응 억제 및 전전두엽 기반 inhibitory control을 평가하는 과제로 사용될 수 있음을 보여줌."
+              }
+            ]
+          },
+          "report_template": {
+            "high_value_phrase": "GNG에서 et_gaze_offset_to_screen_center_mean이 높게 나타난 경우, fixation maintenance(중앙 응시 유지)가 저하되었을 가능성을 시사합니다. 이는 반응억제 저하와 관련된 근거로 해석할 수 있습니다.",
+            "typical_value_phrase": "GNG에서 et_gaze_offset_to_screen_center_mean이 기준 범위에 해당하는 경우, fixation maintenance(중앙 응시 유지) 저하 소견은 두드러지지 않는 것으로 볼 수 있습니다.",
+            "low_value_phrase": "GNG에서 et_gaze_offset_to_screen_center_mean이 낮게 나타난 경우, fixation maintenance(중앙 응시 유지) 저하를 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 반응억제가 우수하다고 단정하지 않습니다."
+          },
+          "clinical_bridge": {
+            "criterion": "DSM-5 ADHD Criterion A2",
+            "criterion_domain": "과잉행동-충동성 증상군",
+            "bridge_type": "auxiliary_observation_not_diagnostic",
+            "related_items": [
+              "A2-g 질문이 끝나기 전에 성급하게 대답함",
+              "A2-h 차례를 기다리기 어려움",
+              "A2-i 다른 사람을 방해하거나 끼어듦"
+            ]
+          },
+          "evidence_insight": "ADHD에서 oculomotor response preparation 및 inhibition 결함을 보고하여, saccade 및 fixation 관련 지표를 반응억제 해석에 연결하는 근거로 사용할 수 있음. / ADHD 아동에서 saccade/antisaccade 등 oculomotor control 이상을 보고하여, 불필요한 시선 이동과 억제 조절 해석의 근거로 사용할 수 있음. / Go/No-Go 과제가 반응 억제 및 전전두엽 기반 inhibitory control을 평가하는 과제로 사용될 수 있음을 보여줌.",
+          "inverse_interpretation_policy": "Do not invert this PI into a positive clinical conclusion without convergent task-performance evidence.",
+          "directional_report_rules": {
+            "high": {
+              "report_hint": "GNG에서 et_gaze_offset_to_screen_center_mean이 높게 나타난 경우, fixation maintenance(중앙 응시 유지)가 저하되었을 가능성을 시사합니다. 이는 반응억제 저하와 관련된 근거로 해석할 수 있습니다.",
+              "aggregate_hint": "fixation maintenance(중앙 응시 유지) 관련 소견은 반응억제 관련 근거가 될 수 있다."
+            },
+            "typical": {
+              "report_hint": "GNG에서 et_gaze_offset_to_screen_center_mean이 기준 범위에 해당하는 경우, fixation maintenance(중앙 응시 유지) 저하 소견은 두드러지지 않는 것으로 볼 수 있습니다.",
+              "aggregate_hint": "기준 범위 소견은 어려움의 직접 근거로 사용하지 않는다."
+            },
+            "low": {
+              "report_hint": "GNG에서 et_gaze_offset_to_screen_center_mean이 낮게 나타난 경우, fixation maintenance(중앙 응시 유지) 저하를 시사하는 근거는 상대적으로 약합니다. 다만 낮은 값만으로 반응억제가 우수하다고 단정하지 않습니다.",
+              "aggregate_hint": "낮은 값만으로 반응억제이 우수하다고 단정하지 않는다."
+            }
+          },
+          "draft_edge_assignment": {
+            "primitive_indicator": "et_gaze_offset_to_screen_center_mean",
+            "task": "GNG",
+            "insight": "fixation maintenance(중앙 응시 유지) 어려움 가능성 ↑ - et_gaze_offset_to_screen_center_mean ↑",
+            "source": "3R SLLM dataset feature-direction specification",
+            "status": "structured_cognitive_mapping_v2"
+          },
+          "task_meaning": "fixation maintenance(중앙 응시 유지): 중앙에 제시되는 자극을 안정적으로 응시하며 시선을 유지하는 과정",
+          "kg_grade": "B-literature-linked-v2"
+        }
+      },
+      "evidence": [
+        {
+          "id": "mahone_2009",
+          "citation": "Mahone, E. M., Mostofsky, S. H., Lasker, A. G., Zee, D., & Denckla, M. B. (2009). Oculomotor anomalies in attention-deficit/hyperactivity disorder: evidence for deficits in response preparation and inhibition. Journal of the American Academy of Child & Adolescent Psychiatry, 48(7), 749-756.",
+          "url": "https://doi.org/10.1097/CHI.0b013e3181a565f1",
+          "doi": "10.1097/CHI.0b013e3181a565f1",
+          "pubmed": "https://pubmed.ncbi.nlm.nih.gov/19465877/",
+          "evidence_note": "ADHD에서 oculomotor response preparation 및 inhibition 결함을 보고하여, saccade 및 fixation 관련 지표를 반응억제 해석에 연결하는 근거로 사용할 수 있음."
+        },
+        {
+          "id": "mostofsky_2001",
+          "citation": "Mostofsky, S. H., Lasker, A. G., Cutting, L. E., Denckla, M. B., & Zee, D. S. (2001). Oculomotor abnormalities in attention deficit hyperactivity disorder: a preliminary study. Neurology, 57(3), 423-430.",
+          "url": "https://doi.org/10.1212/WNL.57.3.423",
+          "doi": "10.1212/WNL.57.3.423",
+          "pubmed": "https://pubmed.ncbi.nlm.nih.gov/11502907/",
+          "evidence_note": "ADHD 아동에서 saccade/antisaccade 등 oculomotor control 이상을 보고하여, 불필요한 시선 이동과 억제 조절 해석의 근거로 사용할 수 있음."
+        },
+        {
+          "id": "casey_1997",
+          "citation": "Casey, B. J., Trainor, R. J., Orendi, J. L., Schubert, A. B., Nystrom, L. E., Giedd, J. N., Castellanos, F. X., Haxby, J. V., Noll, D. C., Cohen, J. D., Forman, S. D., Dahl, R. E., & Rapoport, J. L. (1997). A developmental functional MRI study of prefrontal activation during performance of a go-no-go task. Journal of Cognitive Neuroscience, 9(6), 835-847.",
+          "url": "https://doi.org/10.1162/jocn.1997.9.6.835",
+          "doi": "10.1162/jocn.1997.9.6.835",
+          "evidence_note": "Go/No-Go 과제가 반응 억제 및 전전두엽 기반 inhibitory control을 평가하는 과제로 사용될 수 있음을 보여줌."
+        }
+      ],
+      "report_constraints": [
+        "Use as an auxiliary observation only.",
+        "Do not use this primitive indicator alone to diagnose ADHD or satisfy DSM-5 criteria.",
+        "Interpret together with task accuracy, reaction time, error counts, and task/display context when available."
+      ],
+      "evidence_insight": "ADHD에서 oculomotor response preparation 및 inhibition 결함을 보고하여, saccade 및 fixation 관련 지표를 반응억제 해석에 연결하는 근거로 사용할 수 있음. / ADHD 아동에서 saccade/antisaccade 등 oculomotor control 이상을 보고하여, 불필요한 시선 이동과 억제 조절 해석의 근거로 사용할 수 있음. / Go/No-Go 과제가 반응 억제 및 전전두엽 기반 inhibitory control을 평가하는 과제로 사용될 수 있음을 보여줌.",
+      "references": {
+        "mahone_2009": {
+          "id": "mahone_2009",
+          "citation": "Mahone, E. M., Mostofsky, S. H., Lasker, A. G., Zee, D., & Denckla, M. B. (2009). Oculomotor anomalies in attention-deficit/hyperactivity disorder: evidence for deficits in response preparation and inhibition. Journal of the American Academy of Child & Adolescent Psychiatry, 48(7), 749-756.",
+          "url": "https://doi.org/10.1097/CHI.0b013e3181a565f1",
+          "doi": "10.1097/CHI.0b013e3181a565f1",
+          "pubmed": "https://pubmed.ncbi.nlm.nih.gov/19465877/",
+          "evidence_note": "ADHD에서 oculomotor response preparation 및 inhibition 결함을 보고하여, saccade 및 fixation 관련 지표를 반응억제 해석에 연결하는 근거로 사용할 수 있음."
+        },
+        "mostofsky_2001": {
+          "id": "mostofsky_2001",
+          "citation": "Mostofsky, S. H., Lasker, A. G., Cutting, L. E., Denckla, M. B., & Zee, D. S. (2001). Oculomotor abnormalities in attention deficit hyperactivity disorder: a preliminary study. Neurology, 57(3), 423-430.",
+          "url": "https://doi.org/10.1212/WNL.57.3.423",
+          "doi": "10.1212/WNL.57.3.423",
+          "pubmed": "https://pubmed.ncbi.nlm.nih.gov/11502907/",
+          "evidence_note": "ADHD 아동에서 saccade/antisaccade 등 oculomotor control 이상을 보고하여, 불필요한 시선 이동과 억제 조절 해석의 근거로 사용할 수 있음."
+        },
+        "casey_1997": {
+          "id": "casey_1997",
+          "citation": "Casey, B. J., Trainor, R. J., Orendi, J. L., Schubert, A. B., Nystrom, L. E., Giedd, J. N., Castellanos, F. X., Haxby, J. V., Noll, D. C., Cohen, J. D., Forman, S. D., Dahl, R. E., & Rapoport, J. L. (1997). A developmental functional MRI study of prefrontal activation during performance of a go-no-go task. Journal of Cognitive Neuroscience, 9(6), 835-847.",
+          "url": "https://doi.org/10.1162/jocn.1997.9.6.835",
+          "doi": "10.1162/jocn.1997.9.6.835",
+          "evidence_note": "Go/No-Go 과제가 반응 억제 및 전전두엽 기반 inhibitory control을 평가하는 과제로 사용될 수 있음을 보여줌."
+        }
+      }
+    }
+  },
+  "task_meaning_definitions": {
+    "automatic_processing": "automatic processing(초기 자동처리): 자극이 처음 시야에 들어왔을 때 빠르고 비교적 자동적으로 일어나는 초기 처리 과정",
+    "central_discrimination": "central discrimination(중심시야 기반 자극 판별): 현재 주시 중인 자극을 중심시야 정보로 목표 자극인지 방해 자극인지 판별하는 과정",
+    "intra_subject_variability": "intra-subject variability(수행 시간 변동성): 한 개인 안에서 fixation 또는 trial 간 수행 시간이 얼마나 불안정하게 변동하는지",
+    "search_coverage": "search coverage(시선 탐색 범위): 화면의 여러 위치를 얼마나 넓고 전략적으로 탐색했는지",
+    "target_orienting": "target orienting(목표 정보 지향): 방해 자극이 함께 제시되는 상황에서 목표 정보로 시선을 빠르게 지향하는 과정",
+    "distractor_target_switching": "distractor-target switching(방해-목표 간 시선 전환): 목표 정보와 방해 또는 비목표 정보 사이에서 시선이 전환되는 양상",
+    "target_processing_inefficiency": "target processing inefficiency(목표 정보 처리 비효율): 목표 정보를 확인하고 처리하는 과정에서 상대적으로 더 많은 시간이 필요한 양상",
+    "intrusive_saccade": "intrusive saccade(불필요한 시선 이동): 중앙 자극에 시선을 유지해야 하는 상황에서 과제와 무관하게 발생하는 불필요한 시선 이동",
+    "off_center_gaze_deviation": "off-center gaze deviation(중앙 기준 시선 이탈): 중앙 자극 주변에 시선을 안정적으로 유지하지 못하고 과제와 무관한 방향으로 이탈하는 양상",
+    "fixation_maintenance": "fixation maintenance(중앙 응시 유지): 중앙에 제시되는 자극을 안정적으로 응시하며 시선을 유지하는 과정"
+  }
+}

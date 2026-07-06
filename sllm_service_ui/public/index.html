@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gemma4 Chat</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="chat navigation">
+        <div class="brand">
+          <div class="brand-mark">Prototype</div>
+        </div>
+
+        <div class="status-card">
+          <div class="status-row">
+            <span class="status-dot" id="statusDot"></span>
+            <span id="statusText">연결 확인 중</span>
+          </div>
+          <div class="model-name" id="modelName">gemma4:E4B</div>
+        </div>
+
+        <label class="field-label" for="modelSelect" hidden>Model</label>
+        <select id="modelSelect" class="model-select" aria-label="model selection" hidden></select>
+
+        <div class="kg-control" hidden>
+          <label class="kg-toggle" for="kgToggle">
+            <input id="kgToggle" type="checkbox" />
+            <span>KG</span>
+          </label>
+          <div id="kgStatus" class="kg-status">KG 확인 중</div>
+        </div>
+
+        <div class="log-toolbar">
+          <div>
+            <div class="section-title">대화 로그</div>
+            <div class="section-subtitle">클릭하면 이전 대화를 다시 엽니다.</div>
+          </div>
+          <button id="newChat" class="small-button" type="button">새 대화</button>
+        </div>
+
+        <nav class="log-list" id="logList" aria-label="saved conversations"></nav>
+
+        <div class="sidebar-footer">
+          <a class="secondary-button sidebar-link" href="/kg.html" hidden>KG 보기</a>
+          <button id="settingsButton" class="secondary-button" type="button">설정</button>
+        </div>
+      </aside>
+
+      <main class="chat-panel">
+        <header class="chat-header">
+          <div>
+            <h1>대화</h1>
+            <!-- <p>선택한 LLM 모델과 직접 대화합니다.</p> -->
+          </div>
+          <div class="header-pill" id="headerPill">ready</div>
+        </header>
+
+        <section class="messages" id="messages" aria-live="polite"></section>
+
+        <form class="composer" id="composer">
+          <textarea
+            id="promptInput"
+            rows="1"
+            placeholder="메시지를 입력하세요"
+            autocomplete="off"
+          ></textarea>
+          <button id="sendButton" class="send-button" type="submit" aria-label="send message">
+            <span>전송</span>
+          </button>
+        </form>
+      </main>
+    </div>
+
+    <div class="settings-backdrop" id="settingsBackdrop" hidden>
+      <section class="settings-panel" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+        <header class="settings-header">
+          <div>
+            <h2 id="settingsTitle">설정</h2>
+            <p>System Prompt는 현재 기본값을 유지합니다.</p>
+          </div>
+          <button id="closeSettings" class="small-button" type="button">닫기</button>
+        </header>
+
+        <label class="field-label" for="systemPrompt">System prompt</label>
+        <textarea id="systemPrompt" class="system-prompt" rows="9">너는 한국어로 답변하는 로컬 LLM 어시스턴트다. 사용자의 질문에 정확하게 답하고, 임상 기준처럼 누락되면 안 되는 내용은 지나치게 짧게 줄이지 말고 필요한 제한과 정보 부족을 명확히 밝혀라.</textarea>
+
+        <div class="settings-actions">
+          <button id="resetSystemPrompt" class="secondary-button" type="button">기본값 복원</button>
+          <button id="saveSettings" class="send-button compact" type="button">저장</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
