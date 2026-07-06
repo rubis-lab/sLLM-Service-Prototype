@@ -193,6 +193,19 @@ CNU-S014,Subclinical,M,7,9-23-2025,KKB,0a9a382e-5b25-4953-b275-e84dc7e1507a
 
 `client_id` must match the directory names under `pdss_data/`.
 
+For the current supported cohort, `user_name` values should be one of:
+
+| | | | | | |
+|---|---|---|---|---|---|
+| `CNU-S005` | `CNU-S008` | `CNU-S010` | `CNU-S011` | `CNU-S012` | `CNU-S014` |
+| `CNU-S016` | `CNU-S018` | `CNU-S021` | `CNU-S022` | `CNU-S023` | `CNU-S025` |
+| `CNU-S026` | `CNU-S027` | `CNU-S036` | `CNU-S039` | `CNU-S041` | `CNU-S044` |
+| `CNU-S045` | `CNU-S046` | `CNU-S047` | `CNU-S049` | `CNU-S051` | `CNU-S052` |
+| `CNU-S054` | `CNU-S055` | `CNU-S056` | `CNU-S058` | `CNU-S061` | `CNU-S063` |
+| `CNU-S064` | `CNU-S066` | `CNU-S071` | `CNU-S073` | `CNU-S077` | `CNU-S081` |
+| `CNU-S082` | `CNU-S083` | `CNU-S084` | `CNU-S085` | `CNU-S086` | `CNU-S087` |
+| `CNU-S090` | `CNU-S092` | `CNU-S094` | `CNU-S097` | `CNU-S099` | `CNU-S101` |
+
 ## 3. Prepare The Model Adapter
 
 The UI expects a local fine-tuned adapter at:
