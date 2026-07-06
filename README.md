@@ -33,6 +33,32 @@ Participant raw data, client metadata, generated PI files, generated task
 results, generated summaries, local environment files, logs, and model caches
 should be treated as local/private runtime data.
 
+## Clone With Git LFS
+
+The adapter weight file under `model/adapter/` is stored with Git LFS. Install
+Git LFS before cloning so the `.safetensors` file is downloaded as a real model
+file instead of a small pointer file.
+
+```bash
+git lfs version
+git lfs install
+git clone https://github.com/rubis-lab/sLLM-Service-Prototype.git
+```
+
+If you cloned the repository before installing Git LFS, run this from the
+repository root:
+
+```bash
+git lfs install
+git lfs pull
+```
+
+The adapter file should be roughly 193 MB:
+
+```bash
+ls -lh model/adapter/adapter_model.safetensors
+```
+
 ## Repository Layout
 
 ```text

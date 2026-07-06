@@ -108,6 +108,7 @@ const PROTOTYPE_TASK_CONFIGS = {
     kgTask: "VST",
     displayName: "VST",
     domain: "선택주의력",
+    taskTypeLabel: "시각 탐색 과제",
     summaryFile: path.join(PROTOTYPE_SUMMARY_ROOT, "vst", "vst_summary.json"),
   },
   flanker: {
@@ -115,6 +116,7 @@ const PROTOTYPE_TASK_CONFIGS = {
     kgTask: "Flanker",
     displayName: "Flanker",
     domain: "간섭통제",
+    taskTypeLabel: "간섭 통제 과제",
     summaryFile: path.join(PROTOTYPE_SUMMARY_ROOT, "flanker", "flanker_summary.json"),
   },
   gng: {
@@ -122,6 +124,7 @@ const PROTOTYPE_TASK_CONFIGS = {
     kgTask: "GNG",
     displayName: "GNG",
     domain: "반응억제",
+    taskTypeLabel: "반응억제 과제",
     summaryFile: path.join(PROTOTYPE_SUMMARY_ROOT, "gng", "gng_summary.json"),
   },
 };
@@ -1170,8 +1173,9 @@ function buildPrototypeStructuredReportDataBlock(lookupResult) {
   const taskDefinition = getTaskDefinitionFromKg(config.kgTask);
   const displaySubjectId = subjectId ? `대상자 ${subjectId}` : "대상자";
   const fixedSection5Text = buildFixedPrototypeSection5Text(lookupResult);
+  const taskTypeLabel = config.taskTypeLabel || "시각 탐색 과제";
   const overviewSentence =
-    `본 보고서는 ${displaySubjectId} 학생이 ${config.displayName}에서 보인 시각 탐색 수행 관련 지표를 기반으로 하며, ` +
+    `본 보고서는 ${displaySubjectId} 학생이 ${config.displayName}에서 보인 ${taskTypeLabel} 수행 관련 지표를 기반으로 하며, ` +
     `${config.domain}과(와) 관련된 시각 처리 양상을 해석합니다.`;
   const lines = [
     "[SERVER_STRUCTURED_REPORT_DATA]",
@@ -1453,7 +1457,7 @@ function buildStructuredVstReportDataBlock(student, displayUserName = "") {
     "[SERVER_STRUCTURED_REPORT_DATA]",
     "아래 값은 서버가 학생 데이터에서 조회한 구조화 원자료입니다. [2]와 [3] 섹션 작성 시 이 블록의 task, pi, value, interpretation_label을 우선 사용하세요.",
     `report_subject_id=${reportSubjectId}`,
-    `overview_sentence=본 보고서는 ${reportSubjectId} 학생이 VST에서 보인 시각 탐색 수행 관련 지표를 기반으로 하며, 선택주의력과 관련된 시각 처리 양상을 해석합니다.`,
+    `overview_sentence=본 보고서는 ${reportSubjectId} 학생이 VST에서 보인 시각 탐색 과제 수행 관련 지표를 기반으로 하며, 선택주의력과 관련된 시각 처리 양상을 해석합니다.`,
     "task=VST",
     `task_definition=${taskDefinition || "제공되지 않음"}`,
     "collected_data:",
