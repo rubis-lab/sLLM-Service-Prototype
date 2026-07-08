@@ -14,10 +14,6 @@ tags:
 
 ## QLoRA fine-tuning
 
-### 왜 QLoRA를 쓰는가
-
-이 스크립트는 base 모델 전체를 full fine-tuning하지 않고, 4-bit 양자화된 base 모델 위에 LoRA 어댑터만 학습하는 QLoRA 방식을 사용한다. 목적은 메모리 사용량을 줄이면서도, 도메인 데이터에 맞는 적응을 빠르게 얻는 것이다.
-
 구체적으로는 다음 조합으로 동작한다.
 
 - base model을 `AutoModelForCausalLM`으로 로드
